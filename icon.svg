@@ -1,19 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <rect width="512" height="512" rx="112" fill="#f9f9f7"/>
-  <circle cx="256" cy="256" r="160" fill="none" stroke="#c96442" stroke-width="3" opacity="0.2"/>
-  <circle cx="256" cy="256" r="110" fill="none" stroke="#c96442" stroke-width="3" opacity="0.3"/>
-  <circle cx="256" cy="256" r="60" fill="none" stroke="#c96442" stroke-width="3" opacity="0.4"/>
-  <path d="M256 256 L256 96 A160 160 0 0 1 369 146 Z" fill="#c96442" opacity="0.15">
-    <animateTransform attributeName="transform" type="rotate" from="0 256 256" to="360 256 256" dur="4s" repeatCount="indefinite"/>
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#g)"/>
+  <circle cx="256" cy="256" r="140" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="3"/>
+  <circle cx="256" cy="256" r="95" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="3"/>
+  <circle cx="256" cy="256" r="50" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="3"/>
+  <path d="M256 256 L256 116 A140 140 0 0 1 356 156 Z" fill="rgba(255,255,255,0.2)">
+    <animateTransform attributeName="transform" type="rotate" from="0 256 256" to="360 256 256" dur="3s" repeatCount="indefinite"/>
   </path>
-  <circle cx="256" cy="256" r="10" fill="#c96442"/>
-  <circle cx="340" cy="180" r="7" fill="#4a7ab8">
-    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  <circle cx="256" cy="256" r="12" fill="#fff"/>
+  <circle cx="330" cy="190" r="8" fill="#fff" opacity="0.9">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="190" cy="320" r="7" fill="#d97757">
-    <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite"/>
+  <circle cx="185" cy="310" r="7" fill="#fff" opacity="0.8">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.2s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="310" cy="340" r="5" fill="#b8922a">
-    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/>
+  <circle cx="310" cy="330" r="6" fill="#fff" opacity="0.7">
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1.5s" repeatCount="indefinite"/>
   </circle>
 </svg>

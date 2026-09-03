@@ -5,17 +5,12 @@
   "start_url": "./index.html",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#f9f9f7",
-  "theme_color": "#f9f9f7",
+  "background_color": "#0f0f1a",
+  "theme_color": "#0f0f1a",
   "lang": "zh-CN",
   "scope": "./",
   "icons": [
-    {
-      "src": "icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    }
+    {"src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}
   ],
   "categories": ["lifestyle", "utilities", "events"]
 }
