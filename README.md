@@ -1,67 +1,97 @@
-# 活动雷达 ActivityRadar
+# 活动雷达 ActivityRadar v2.0
 
-> **你的城市活动脉搏** — 聚合 AI 科技盛会与马拉松赛事，实时捕捉志愿者招募机会。PWA 渐进式网页应用，支持 GPS 定位自动切换城市，武汉活动红色高亮优先突出。
+> 「你的城市，正在发生什么？」—— AI 与马拉松活动即时搜索 + 志愿者招募一站式平台
+
+## 🌟 项目简介
+
+活动雷达是一款专注于 **AI 厂商线下活动** 与 **马拉松赛事** 的即时搜索与志愿者招募通知应用。无论你是技术爱好者、跑者还是志愿者，都能第一时间掌握身边正在发生的精彩活动。
+
+### ✨ 核心特性
+
+- **🔍 全网活动即时搜索** — 聚合各大 AI 厂商（字节跳动、百度、阿里、腾讯、华为等）线下沙龙、黑客松、技术大会，以及全国马拉松赛事信息
+- **📍 智能定位切换** — 基于地理位置自动推荐附近活动，**武汉地区活动重点高亮突出**
+- **🙋 志愿者招募通知** — 每场活动附带志愿者招募信息，一键了解报名条件与截止日期
+- **🌓 深色/浅色双模式** — 现代时尚 UI，渐变色彩 + 毛玻璃效果 + 流畅微动画
+- **📱 跨平台支持** — Web 版（PWA）+ Android APK 安装包，独立联网与定位
+- **⚡ C++ 高性能引擎** — 核心搜索筛选引擎采用 C++ 零依赖实现，毫秒级响应
+- **🐍 Python 数据管理** — Python 脚本提供数据统计、导出、校验等管理能力
+
+### 📊 数据概览
+
+- 30+ 场精选活动数据
+- 武汉地区 17 场（AI 13 场 + 马拉松 4 场）
+- 覆盖北京、上海、深圳、杭州、成都等 10+ 城市
+- 志愿者招募信息全覆盖
+
+## 🚀 快速开始
+
+### Web 版
+
+直接访问：https://072529-aaa.github.io/activity-radar-web/
+
+### Android 版
+
+下载 Release 中的 APK 安装包，安装即可使用。支持 Android 7.0+。
+
+## 🛠 技术栈
+
+| 层级 | 技术 |
+|------|------|
+| 前端 | 原生 HTML/CSS/JS（PWA） |
+| 搜索核心 | C++17（零依赖 JSON 解析 + 筛选排序引擎） |
+| 数据管理 | Python 3 |
+| 移动端 | Android WebView（手动编译，无 Gradle 依赖） |
+| 部署 | GitHub Pages |
+
+## 📁 项目结构
+
+```
+activity-radar-v2/
+├── www/                    # Web 前端（PWA）
+│   ├── index.html          # 主页面（现代时尚 UI）
+│   ├── manifest.json       # PWA 清单
+│   ├── sw.js               # Service Worker
+│   ├── activities.json     # 活动数据
+│   └── icon.svg            # 应用图标
+├── src/
+│   ├── cpp/
+│   │   ├── activity_engine.cpp   # C++ 搜索引擎
+│   │   └── activity_engine.exe   # 编译后的可执行文件
+│   └── python/
+│       └── data_manager.py       # Python 数据管理脚本
+└── manual-apk/             # Android APK 手动构建工程
+```
+
+## 🎯 C++ 引擎使用
+
+```bash
+# 搜索武汉的 AI 活动
+activity_engine.exe --data activities.json --city 武汉 --type ai
+
+# 搜索本周的马拉松活动
+activity_engine.exe --data activities.json --type marathon --time week
+
+# 按日期排序输出 JSON
+activity_engine.exe --data activities.json --sort date --json
+```
+
+## 🐍 Python 数据管理
+
+```bash
+# 查看数据统计
+python data_manager.py stats
+
+# 搜索活动
+python data_manager.py search --city 武汉 --type ai
+
+# 导出为 CSV
+python data_manager.py export --format csv
+```
+
+## 📜 License
+
+MIT License — 自由使用，欢迎 Star ⭐
 
 ---
 
-## 简介
-
-活动雷达是一款 **PWA（渐进式网页应用）**，帮你提前了解附近正在发生的 AI 厂商线下活动与马拉松赛事，以及相关的志愿者招募机会。
-
-- **AI 活动**：智博会、产业大会、黑客松、创新大赛、厂商巡展等
-- **马拉松赛事**：全马、半马、迷你马、越野跑等
-- **志愿者招募**：招募人数、岗位、福利、报名方式一站式查看
-- **武汉优先**：武汉本地活动红色边框高亮，排序可设为武汉优先
-
-## 功能
-
-- 城市切换：武汉 / 北京 / 上海 / 广州 / 深圳 / 杭州 / 成都 / 南京 / 长沙 / 重庆 / 合肥 / 厦门 / 全部
-- GPS 定位：一键定位当前城市，自动匹配最近城市
-- 类型筛选：AI 活动 / 马拉松 / 志愿者招募
-- 时间筛选：本周 / 本月 / 未来三月
-- 关键词搜索：标题、地点、主办方、描述、标签全文检索
-- 排序：按时间 / 武汉优先 / 志愿者优先
-- 活动详情弹窗：完整信息展示
-- 离线可用：Service Worker 缓存，断网可浏览已加载内容
-
-## 访问
-
-GitHub Pages 部署后访问：
-
-```
-https://072529-aaa.github.io/activity-radar-web/
-```
-
-## 安卓安装
-
-本应用为 PWA，可在安卓上获得类原生 App 体验：
-
-1. 用 Chrome 打开上方链接
-2. 点击菜单（右上角三个点）→ **「添加到主屏幕」**
-3. 桌面生成独立图标，点击全屏启动，无浏览器地址栏
-4. 支持独立联网与 GPS 定位
-
-如需真正的 APK 安装包，可使用 Capacitor 打包：
-
-```bash
-npm install -g @capacitor/cli
-npx cap init activity-radar com.example.activityradar --web-dir=.
-npx cap add android
-npx cap open android
-# 在 Android Studio 中 Build → Build Bundle(s) / APK(s) → Build APK(s)
-```
-
-## 技术栈
-
-- 纯前端 HTML / CSS / JavaScript，零框架依赖
-- PWA：manifest.json + Service Worker
-- Geolocation API：浏览器定位
-- Claude 式浅色文气 UI：暖米白底色、衬线标题、陶土橙强调色
-
-## 数据说明
-
-内置 30 场活动数据（2026 年），数据仅供参考，请以官方发布为准。
-
-## License
-
-MIT
+*用代码丈量城市，用热爱连接每一场活动。*
