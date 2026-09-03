@@ -1,0 +1,25 @@
+# OS files
+Thumbs.db
+.DS_Store
+
+# Node.js
+node_modules/
+android-pack/node_modules/
+
+# Android build output and IDE files
+android-pack/android/.gradle/
+android-pack/android/build/
+android-pack/android/app/build/
+android-pack/android/local.properties
+android-pack/android/.idea/
+
+# Release secrets and artifacts
+android-pack/keystore.properties
+*.jks
+*.keystore
+*.apk
+*.aab
+
+# Local preview output
+.activity-radar-repo/
+dist/

@@ -1,97 +1,109 @@
-# 活动雷达 ActivityRadar v2.0
+# 活动雷达 ActivityRadar
 
-> 「你的城市，正在发生什么？」—— AI 与马拉松活动即时搜索 + 志愿者招募一站式平台
+聚合 AI 科技盛会、马拉松赛事与志愿者招募信息的城市活动雷达。纯前端 PWA，可一键定位最近城市，并发布为 Android APK。
 
-## 🌟 项目简介
+![GitHub Pages](https://img.shields.io/badge/PWA-动态更新-brightgreen) ![Android](https://img.shields.io/badge/Android-Capacitor-blue)
 
-活动雷达是一款专注于 **AI 厂商线下活动** 与 **马拉松赛事** 的即时搜索与志愿者招募通知应用。无论你是技术爱好者、跑者还是志愿者，都能第一时间掌握身边正在发生的精彩活动。
+## 在线访问
 
-### ✨ 核心特性
+- GitHub Pages：`https://072529-aaa.github.io/activity-radar-web/`
+- 安卓 APK：本仓库 Release 中下载 `ActivityRadar-v2.1.0.apk`
 
-- **🔍 全网活动即时搜索** — 聚合各大 AI 厂商（字节跳动、百度、阿里、腾讯、华为等）线下沙龙、黑客松、技术大会，以及全国马拉松赛事信息
-- **📍 智能定位切换** — 基于地理位置自动推荐附近活动，**武汉地区活动重点高亮突出**
-- **🙋 志愿者招募通知** — 每场活动附带志愿者招募信息，一键了解报名条件与截止日期
-- **🌓 深色/浅色双模式** — 现代时尚 UI，渐变色彩 + 毛玻璃效果 + 流畅微动画
-- **📱 跨平台支持** — Web 版（PWA）+ Android APK 安装包，独立联网与定位
-- **⚡ C++ 高性能引擎** — 核心搜索筛选引擎采用 C++ 零依赖实现，毫秒级响应
-- **🐍 Python 数据管理** — Python 脚本提供数据统计、导出、校验等管理能力
+在 Chrome 中打开在线地址后，可通过「添加到主屏幕」获得全屏独立窗口的 PWA 体验。
 
-### 📊 数据概览
+## 核心功能
 
-- 30+ 场精选活动数据
-- 武汉地区 17 场（AI 13 场 + 马拉松 4 场）
-- 覆盖北京、上海、深圳、杭州、成都等 10+ 城市
-- 志愿者招募信息全覆盖
+- 城市筛选：支持武汉、北京、上海、广州、深圳、杭州、成都、南京、长沙、重庆、合肥、厦门及「全部」
+- 一键定位：读取设备位置，自动匹配最近城市，也可手动选择
+- 活动类型：AI 活动、马拉松、志愿者招募
+- 时间筛选：本周 / 本月 / 未来三月
+- 关键词搜索与排序：时间 / 武汉优先 / 志愿者优先
+- 详情弹窗：活动介绍、志愿者岗位、人数、截止时间、福利与报名渠道
+- 武汉优先：武汉活动以红色边框高亮，排序可一键置顶
+- 离线可用：Service Worker 缓存页面壳与数据
 
-## 🚀 快速开始
+## 动态更新
 
-### Web 版
+活动数据独立存放在 `data/activities.json`，不随页面源码一起写死：
 
-直接访问：https://072529-aaa.github.io/activity-radar-web/
-
-### Android 版
-
-下载 Release 中的 APK 安装包，安装即可使用。支持 Android 7.0+。
-
-## 🛠 技术栈
-
-| 层级 | 技术 |
-|------|------|
-| 前端 | 原生 HTML/CSS/JS（PWA） |
-| 搜索核心 | C++17（零依赖 JSON 解析 + 筛选排序引擎） |
-| 数据管理 | Python 3 |
-| 移动端 | Android WebView（手动编译，无 Gradle 依赖） |
-| 部署 | GitHub Pages |
-
-## 📁 项目结构
-
-```
-activity-radar-v2/
-├── www/                    # Web 前端（PWA）
-│   ├── index.html          # 主页面（现代时尚 UI）
-│   ├── manifest.json       # PWA 清单
-│   ├── sw.js               # Service Worker
-│   ├── activities.json     # 活动数据
-│   └── icon.svg            # 应用图标
-├── src/
-│   ├── cpp/
-│   │   ├── activity_engine.cpp   # C++ 搜索引擎
-│   │   └── activity_engine.exe   # 编译后的可执行文件
-│   └── python/
-│       └── data_manager.py       # Python 数据管理脚本
-└── manual-apk/             # Android APK 手动构建工程
+```json
+{
+  "updatedAt": "2026-09-03T16:30:00+08:00",
+  "items": [
+    {
+      "id": 1,
+      "type": "ai",
+      "city": "武汉",
+      "title": "活动名称",
+      "date": "2026-10-01",
+      "endDate": "2026-10-02",
+      "volunteer": { "recruiting": true }
+    }
+  ]
+}
 ```
 
-## 🎯 C++ 引擎使用
+应用在以下时机自动检查并更新：
+
+- 打开页面时
+- 页面保持在线期间每 15 分钟
+- 从后台切回前台时
+
+离线时回退到本地缓存；本地无缓存时展示页面内置示例数据。所有活动信息仅供信息参考，不构成官方报名渠道，请以活动方官方发布为准。
+
+## 更新数据并发布
+
+1. 修改或追加 `data/activities.json` 中的 `items`
+2. 同时更新 `updatedAt`
+3. 提交并推送到 `main`，GitHub Pages 工作流会自动发布
+4. 已安装的 PWA / APK 在联网状态下会自动拉到新数据
+
+如果页面内嵌的示例数据需要同步为 JSON，可运行：
 
 ```bash
-# 搜索武汉的 AI 活动
-activity_engine.exe --data activities.json --city 武汉 --type ai
-
-# 搜索本周的马拉松活动
-activity_engine.exe --data activities.json --type marathon --time week
-
-# 按日期排序输出 JSON
-activity_engine.exe --data activities.json --sort date --json
+node scripts/export-data.mjs
 ```
 
-## 🐍 Python 数据管理
+## 本地运行
+
+Service Worker 需要 HTTP(S) 环境，不建议直接双击 HTML：
 
 ```bash
-# 查看数据统计
-python data_manager.py stats
-
-# 搜索活动
-python data_manager.py search --city 武汉 --type ai
-
-# 导出为 CSV
-python data_manager.py export --format csv
+python -m http.server 8080
+# 或 npx serve .
+# 访问 http://localhost:8080
 ```
 
-## 📜 License
+## Android APK
 
-MIT License — 自由使用，欢迎 Star ⭐
+工程目录为 `android-pack/`，基于 Capacitor。Android 源码中已声明网络与定位权限，并用与网页一致的雷达图标作为启动图标。
 
----
+重新构建：
 
-*用代码丈量城市，用热爱连接每一场活动。*
+```bash
+cd android-pack
+npm ci
+npx cap sync android
+cd android
+./gradlew assembleRelease
+```
+
+APK 输出到 `android-pack/android/app/build/outputs/apk/release/`。签名密钥不提交到 GitHub，构建时通过 `keystore.properties` 或环境变量提供。
+
+## 目录结构
+
+```text
+.
+├── index.html          # 单页应用
+├── data/activities.json # 可远程更新的活动数据
+├── sw.js               # Service Worker
+├── manifest.json       # PWA 清单
+├── icons/              # PWA 图标
+├── scripts/export-data.mjs
+├── .github/workflows/pages.yml
+└── android-pack/       # Capacitor Android 工程
+```
+
+## License
+
+MIT
