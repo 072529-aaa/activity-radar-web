@@ -1,6 +1,6 @@
 {
   "name": "activity-radar-apk",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "private": true,
   "description": "Capacitor wrapper for 活动雷达 ActivityRadar",
   "scripts": {
@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "@capacitor/android": "8.5.1",
-    "@capacitor/core": "8.5.1"
+    "@capacitor/core": "8.5.1",
+    "@capacitor/geolocation": "^8.2.2"
   },
   "devDependencies": {
     "@capacitor/cli": "8.5.1"

@@ -45,6 +45,22 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); min-
 .city-btn:hover { border-color: var(--border-strong); }
 .city-btn .city-name { font-weight: 500; }
 .city-btn .wuhan-tag { font-size: 10px; color: var(--wuhan); font-weight: 500; }
+.icon-btn {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+.icon-btn:hover { color: var(--accent); border-color: var(--accent); }
+.icon-btn.checking svg { animation: spin 1s linear infinite; }
 .city-dropdown { position: absolute; top: calc(100% + 6px); right: 0; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 6px; min-width: 180px; box-shadow: var(--shadow-hover); display: none; z-index: 200; }
 .city-dropdown.open { display: block; }
 .city-dropdown-title { font-size: 10px; color: var(--text-muted); padding: 6px 10px 4px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; }
@@ -176,15 +192,16 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); min-
   .logo { font-size: 15px; }
   .logo small { display: none; }
   .search-box { max-width: none; order: 3; flex-basis: 100%; }
-  .nav-actions { flex-wrap: wrap; }
+  .nav-actions { flex-wrap: wrap; min-width: 0; }
   .hero { padding: 36px 16px 28px; }
   .hero h1 { font-size: 26px; }
   .hero p { font-size: 14px; }
   .hero-stats { gap: 28px; }
   .stat-num { font-size: 22px; }
-  .filter-bar { padding: 16px 14px; }
-  .activity-section { padding: 0 14px 40px; }
-  .activity-grid { grid-template-columns: 1fr; }
+  .filter-bar { padding: 16px 14px; min-width: 0; }
+  .activity-section { padding: 0 14px 40px; min-width: 0; }
+  .vol-zone { padding: 0 14px 40px; min-width: 0; }
+  .activity-grid { grid-template-columns: minmax(0, 1fr); }
   .modal-header { padding: 22px 18px 14px; }
   .modal-body { padding: 18px; }
   .info-grid { grid-template-columns: 1fr; }
@@ -193,6 +210,355 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); min-
   .city-dropdown { right: auto; left: 0; }
   .sort-select { margin-left: 0; width: 100%; order: 3; flex-basis: 100%; }
   .loc-btn span { display: none; }
+}
+/* Android safe-area, no horizontal overflow, compact cards */
+html {
+  max-width: 100%;
+  scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 60px);
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+.nav {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+.nav-inner {
+  height: auto;
+  min-height: 60px;
+}
+.hero, .filter-bar, .activity-section, .vol-zone {
+  overflow: hidden;
+  min-width: 0;
+}
+.activity-grid {
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+}
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  max-width: 100%;
+  padding: 17px 16px;
+  overflow: hidden;
+}
+.activity-card:hover {
+  transform: none;
+}
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+}
+.type-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 68%;
+  padding: 3px 9px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.type-pill::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: currentColor;
+}
+.type-pill.ai { background: var(--ai-soft); color: var(--ai); }
+.type-pill.run { background: var(--run-soft); color: var(--run); }
+.activity-card .card-date-tag {
+  flex-shrink: 0;
+}
+.activity-card .card-title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  min-width: 0;
+}
+.card-info-row {
+  display: grid;
+  grid-template-columns: 15px 32px minmax(0, 1fr);
+  align-items: start;
+  gap: 7px;
+  min-width: 0;
+}
+.card-info-row svg {
+  margin-top: 2px;
+  opacity: 0.55;
+  flex-shrink: 0;
+}
+.card-info-row dt {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.card-info-row dd {
+  margin: 0;
+  min-width: 0;
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.card-info-row dd.reg-open { color: var(--vol); }
+.card-info-row dd.reg-closed { color: var(--text-muted); }
+.card-go {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 500;
+}
+.card-go svg { flex-shrink: 0; }
+.footer {
+  padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+}
+.toast {
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+}
+/* Full-screen detail view */
+.detail-page {
+  position: fixed;
+  inset: 0;
+  z-index: 600;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  animation: detail-in 0.22s ease;
+}
+.detail-page[hidden] { display: none; }
+@keyframes detail-in {
+  from { opacity: 0; transform: translateX(24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.detail-topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: calc(env(safe-area-inset-top, 0px) + 6px) 12px 6px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(249, 249, 247, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 10;
+}
+.detail-back {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.detail-back:hover { border-color: var(--accent); color: var(--accent); }
+.detail-topbar-title {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 600;
+}
+.detail-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0 18px calc(env(safe-area-inset-bottom, 0px) + 96px);
+}
+.detail-hero {
+  padding: 22px 2px 18px;
+  border-bottom: 1px solid var(--border);
+}
+.detail-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: var(--text-muted);
+  font-size: 11px;
+}
+.detail-eyebrow .type-pill { max-width: 100%; }
+.detail-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.detail-organizer {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.detail-countdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 500;
+}
+.facts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 16px 0 4px;
+}
+.fact {
+  min-width: 0;
+  padding: 11px 13px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.fact-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.fact-value {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.detail-section {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+.detail-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.detail-section h2::before {
+  content: '';
+  width: 4px;
+  height: 15px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+.detail-desc {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--text-secondary);
+}
+.detail-tags, .value-list, .channel-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.detail-tag, .value-item {
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  background: var(--ai-soft);
+  color: var(--ai);
+}
+.value-item {
+  background: var(--accent-soft);
+  color: var(--accent);
+  line-height: 1.6;
+}
+.channel-item {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  background: var(--card);
+}
+.channel-item strong { color: var(--text); }
+.vol-detail-box {
+  padding: 15px;
+  background: var(--vol-soft);
+  border: 1px solid rgba(184, 146, 42, 0.18);
+  border-radius: var(--radius);
+}
+.vol-detail-box .role-line { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+.vol-role-chip {
+  padding: 3px 9px;
+  border-radius: 5px;
+  background: rgba(184, 146, 42, 0.12);
+  color: var(--vol);
+  font-size: 12px;
+  font-weight: 500;
+}
+.vol-meta-line {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 8px 0;
+}
+.detail-actions {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  gap: 10px;
+  padding: 10px 18px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: rgba(249, 249, 247, 0.96);
+  border-top: 1px solid var(--border);
+}
+.detail-actions .btn { min-width: 0; }
+@media (max-width: 768px) {
+  .facts-grid { grid-template-columns: 1fr; }
+  .detail-title { font-size: 20px; }
+  .detail-actions { padding-left: 14px; padding-right: 14px; }
+  .vol-meta-line { grid-template-columns: 1fr; }
+  .modal { max-height: calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 24px); }
 }
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
@@ -211,6 +577,9 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); min-
       <button class="loc-btn" id="locBtn" title="使用我的位置" aria-label="使用我的位置定位">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="4"/></svg>
         <span>定位</span>
+      </button>
+      <button class="icon-btn" id="refreshBtn" title="检查活动数据更新" aria-label="检查活动数据更新">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-2.64-6.36M21 3v6h-6"/></svg>
       </button>
       <div class="city-selector">
         <button class="city-btn" id="cityBtn" aria-haspopup="listbox" aria-label="选择城市">
@@ -299,6 +668,45 @@ body { font-family: var(--sans); background: var(--bg); color: var(--text); min-
     </div>
   </div>
 </div>
+<main class="detail-page" id="detailPage" hidden aria-label="活动详情">
+  <header class="detail-topbar">
+    <button class="detail-back" id="detailBack" aria-label="返回活动列表">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    </button>
+    <span class="detail-topbar-title">活动详情</span>
+    <span class="type-pill ai" id="detailStatusChip" style="margin-left:auto; display:inline-flex;">加载中</span>
+  </header>
+  <div class="detail-scroll" id="detailScroll">
+    <div class="detail-hero">
+      <div class="detail-eyebrow" id="detailEyebrow"></div>
+      <h1 class="detail-title" id="detailTitle"></h1>
+      <p class="detail-organizer" id="detailOrganizer"></p>
+      <div class="detail-countdown" id="detailCountdown"></div>
+    </div>
+    <section class="facts-grid" id="detailFacts" aria-label="活动关键信息"></section>
+    <section class="detail-section">
+      <h2>活动内容</h2>
+      <p class="detail-desc" id="detailDesc"></p>
+      <div class="detail-tags" id="detailTags" style="margin-top:12px;"></div>
+    </section>
+    <section class="detail-section" id="valueSection" hidden>
+      <h2>参与价值</h2>
+      <div class="value-list" id="detailValues"></div>
+    </section>
+    <section class="detail-section" id="channelSection">
+      <h2>官网与官方渠道</h2>
+      <div class="channel-list" id="detailChannels"></div>
+    </section>
+    <section class="detail-section" id="volSection">
+      <h2>志愿者招募</h2>
+      <div id="detailVolunteer"></div>
+    </section>
+  </div>
+  <div class="detail-actions" id="detailActions">
+    <button class="btn btn-primary" id="detailCopyBtn">复制活动信息</button>
+    <button class="btn btn-vol" id="detailApplyBtn" hidden>打开报名渠道</button>
+  </div>
+</main>
 <div class="toast" id="toast"></div>
 <footer class="footer">
   <div class="footer-title">活动雷达 ActivityRadar</div>
@@ -494,6 +902,391 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.addEventListener('visibilitychange', () => {
     if(document.visibilityState === 'visible') loadRemoteData({ quiet: true });
   });
+});
+/* ===== v2.2 mobile/Android + 简卡详情页增强 ===== */
+const DATA_CACHE_KEY_V3 = "activity-radar-data-v3";
+let dataLastChecked = "";
+let detailOpenId = 0;
+
+function escHtml(v){
+  return String(v == null ? "" : v)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function fullDate(ds){
+  if(!ds) return "";
+  const p = String(ds).split("-").map(Number);
+  if(p.length < 3 || p.some(n => Number.isNaN(n))) return String(ds);
+  return `${p[0]}年${p[1]}月${p[2]}日`;
+}
+
+function fullDateRange(s, e){
+  return s === e ? fullDate(s) : `${fullDate(s)} 至 ${fullDate(e)}`;
+}
+
+function registerNativeGeolocationPlugin(){
+  if(!isNativeContainer() || !window.Capacitor || !window.Capacitor.registerPlugin) return null;
+  if(!window.Capacitor.Plugins || !window.Capacitor.Plugins.Geolocation){
+    try { window.Capacitor.registerPlugin("Geolocation"); } catch(_) { return null; }
+  }
+  return (window.Capacitor.Plugins && window.Capacitor.Plugins.Geolocation) || null;
+}
+
+function dataCandidateUrls(){
+  const urls = [];
+  const t = Date.now().toString(36);
+  const bust = u => `${u}${u.includes("?") ? "&" : "?"}_t=${t}`;
+  const pagesUrl = "https://072529-aaa.github.io/activity-radar-web/data/activities.json";
+  const rawUrl = "https://raw.githubusercontent.com/072529-aaa/activity-radar-web/main/data/activities.json";
+  const cdnUrl = "https://cdn.jsdelivr.net/gh/072529-aaa/activity-radar-web@main/data/activities.json";
+  if(location.protocol === "http:" || location.protocol === "https:"){
+    const localUrl = new URL("data/activities.json", location.href).href;
+    if(!isNativeContainer()) urls.push(bust(localUrl));
+  }
+  urls.push(bust(pagesUrl), bust(rawUrl), bust(cdnUrl));
+  if(isNativeContainer() && location.protocol === "https:"){
+    urls.push(new URL("data/activities.json", location.href).href);
+  }
+  return [...new Set(urls)];
+}
+
+function renderDataMeta(){
+  const el = document.getElementById("dataMeta");
+  if(!el) return;
+  if(dataUpdatedAt){
+    el.textContent = `最新数据已同步 · ${formatDateTime(dataUpdatedAt)} · 每 15 分钟自动联网检查`;
+  } else if(dataLastChecked){
+    el.textContent = `联网检查失败 · ${formatDateTime(dataLastChecked)} · 正在使用缓存数据`;
+  } else {
+    el.textContent = "正在连接最新活动数据，请稍候…";
+  }
+}
+
+async function loadRemoteData({ quiet = false } = {}){
+  const before = dataUpdatedAt;
+  for(const url of dataCandidateUrls()){
+    const payload = await fetchJson(url);
+    if(payload && applyRemoteData(payload)){
+      try { localStorage.setItem(DATA_CACHE_KEY_V3, JSON.stringify(payload)); } catch(_) {}
+      dataLastChecked = new Date().toISOString();
+      renderViews();
+      refreshOpenDetail();
+      renderDataMeta();
+      if(!quiet) showToast(before && dataUpdatedAt !== before ? "活动数据已更新" : "已获取最新活动数据");
+      return;
+    }
+  }
+  try {
+    const raw = localStorage.getItem(DATA_CACHE_KEY_V3) || localStorage.getItem(DATA_CACHE_KEY);
+    if(raw){
+      const payload = JSON.parse(raw);
+      if(applyRemoteData(payload)){
+        dataLastChecked = new Date().toISOString();
+        renderViews();
+        refreshOpenDetail();
+        renderDataMeta();
+        return;
+      }
+    }
+  } catch(_) {}
+  dataLastChecked = new Date().toISOString();
+  renderDataMeta();
+  if(!quiet) showToast("网络暂不可用，正在使用最近一次缓存数据");
+}
+
+function getRegisterText(a){
+  const v = a.volunteer || {};
+  const s = getVolunteerStatus(a);
+  if(s.open){
+    return v.deadline ? `报名 ${formatDate(v.deadline)} 截止` : `报名中 · 招募 ${v.count || 0} 人`;
+  }
+  if(s.closed){
+    return v.deadline ? `报名 ${formatDate(v.deadline)} 已截止` : "报名已截止";
+  }
+  return "报名渠道见详情";
+}
+
+function renderCard(a){
+  const cls = a.type === "marathon" ? "run" : "ai";
+  const reg = getRegisterText(a);
+  const regClass = reg.includes("已截止") ? "reg-closed" : (reg.startsWith("报名 ") && reg.includes("截止") ? "reg-open" : "");
+  const typeText = `${getTypeLabel(a.type)} · ${a.city}`;
+  return `<article class="activity-card" data-id="${a.id}" role="button" tabindex="0" aria-label="查看活动详情：${escHtml(a.title)}">
+    <div class="card-head"><span class="type-pill ${cls}">${escHtml(typeText)}</span><span class="card-date-tag">${escHtml(getCardDateLabel(a))}</span></div>
+    <h3 class="card-title">${escHtml(a.title)}</h3>
+    <dl class="card-info">
+      <div class="card-info-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><dt>时间</dt><dd>${escHtml(fullDateRange(a.date, a.endDate))}</dd></div>
+      <div class="card-info-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><dt>地点</dt><dd>${escHtml(a.city)} · ${escHtml(a.location)}</dd></div>
+      <div class="card-info-row"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg><dt>报名</dt><dd class="${regClass}">${escHtml(reg)}</dd></div>
+    </dl>
+    <div class="card-go"><span>查看详情</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+  </article>`;
+}
+
+function showDetail(id){
+  const a = activities.find(x => x.id === id);
+  const page = document.getElementById("detailPage");
+  const scroll = document.getElementById("detailScroll");
+  if(!a || !page) return false;
+  detailOpenId = id;
+  renderDetail(a);
+  page.hidden = false;
+  document.body.style.overflow = "hidden";
+  if(scroll) scroll.scrollTop = 0;
+  requestAnimationFrame(() => {
+    const back = document.getElementById("detailBack");
+    if(back && !page.hidden) back.focus();
+  });
+  return true;
+}
+
+function closeDetail(){
+  const page = document.getElementById("detailPage");
+  if(!page || page.hidden) return;
+  page.hidden = true;
+  detailOpenId = 0;
+  document.title = "活动雷达 · 发现身边的AI盛会与马拉松";
+  document.body.style.overflow = "";
+  if(lastFocused && lastFocused.isConnected && lastFocused.focus) lastFocused.focus();
+}
+
+function openModal(id){
+  const a = activities.find(x => x.id === id);
+  if(!a) return;
+  lastFocused = document.activeElement;
+  const hash = `#/activity/${a.id}`;
+  if(location.hash === hash){
+    renderDetail(a);
+    showDetail(a.id);
+    return;
+  }
+  history.pushState(null, "", hash);
+  showDetail(a.id);
+}
+
+function handleHash(){
+  const match = location.hash.match(/^#\/activity\/(\d+)/);
+  if(!match){
+    closeDetail();
+    return;
+  }
+  if(!showDetail(Number(match[1]))){
+    history.replaceState(null, "", location.pathname + location.search);
+  }
+}
+
+function goHome(){
+  const page = document.getElementById("detailPage");
+  if(!page || page.hidden) return;
+  history.replaceState(null, "", location.pathname + location.search + "#/");
+  closeDetail();
+}
+
+function refreshOpenDetail(){
+  if(!detailOpenId) return;
+  const a = activities.find(x => x.id === detailOpenId);
+  if(a) renderDetail(a);
+  else goHome();
+}
+
+function findWebsite(text){
+  const m = String(text || "").match(/(?:https?:\/\/)?(?:www\.)?[a-z0-9][a-z0-9.-]*\.[a-z]{2,}(?:\/[^\s，。；]*)?/i);
+  if(!m) return "";
+  const url = m[0];
+  return /^https?:\/\//i.test(url) ? url : `https://${url}`;
+}
+
+function buildActivityInfo(a){
+  const v = a.volunteer || {};
+  const s = getVolunteerStatus(a);
+  const deadline = s.open && v.deadline ? fullDate(v.deadline) + " 截止" : (s.closed && v.deadline ? `已于 ${fullDate(v.deadline)} 截止` : "见官方渠道");
+  return [
+    `活动：${a.title}`,
+    `类型：${getTypeLabel(a.type)} · ${a.category}`,
+    `时间：${fullDateRange(a.date, a.endDate)}`,
+    `地点：${a.city} · ${a.location}`,
+    `主办方：${a.organizer || "待公布"}`,
+    `报名时间：${deadline}`,
+    v.contact ? `官方渠道：${v.contact}` : "官方渠道：请以活动主办方发布为准"
+  ].join("\n");
+}
+
+function renderDetail(a){
+  if(!a) return;
+  const v = a.volunteer || {};
+  const s = getVolunteerStatus(a);
+  const typeCls = a.type === "marathon" ? "run" : "ai";
+  const pill = document.getElementById("detailStatusChip");
+  pill.className = `type-pill ${typeCls}`;
+  pill.textContent = s.open ? "志愿者招募中" : getCardDateLabel(a);
+  document.getElementById("detailEyebrow").innerHTML = `<span class="type-pill ${typeCls}">${escHtml(getTypeLabel(a.type))} · ${escHtml(a.city)}</span>`;
+  document.getElementById("detailTitle").textContent = a.title;
+  document.getElementById("detailOrganizer").textContent = `主办方：${a.organizer || "待官方公布"}`;
+
+  const startDays = getDaysUntil(a.date);
+  const endDays = getDaysUntil(a.endDate || a.date);
+  let countdown = "";
+  if(endDays < 0) countdown = "该活动已结束，可查看详情与回顾信息";
+  else if(startDays < 0) countdown = "活动正在进行中";
+  else if(startDays === 0) countdown = "活动今天开始";
+  else if(startDays === 1) countdown = "距离活动开始还有 1 天";
+  else countdown = `距离活动开始还有 ${startDays} 天`;
+  const countdownEl = document.getElementById("detailCountdown");
+  countdownEl.textContent = countdown;
+
+  const regValue = s.open ? (v.deadline ? fullDate(v.deadline) + " 截止" : "正在招募中")
+    : (s.closed && v.deadline ? `已于 ${fullDate(v.deadline)} 截止` : "见下方官方渠道");
+  const facts = [
+    ["活动时间", fullDateRange(a.date, a.endDate)],
+    ["活动地点", `${a.city} · ${a.location}`],
+    ["报名时间", regValue],
+    ["活动类型", `${a.category} · ${getTypeLabel(a.type)}`],
+    ["主办方", a.organizer || "待官方公布"]
+  ];
+  document.getElementById("detailFacts").innerHTML = facts.map(f => `<div class="fact"><div class="fact-label">${f[0]}</div><div class="fact-value">${escHtml(f[1])}</div></div>`).join("");
+  document.getElementById("detailDesc").textContent = a.description || "活动详情待官方更新。";
+  document.getElementById("detailTags").innerHTML = (a.tags || []).map(t => `<span class="detail-tag">${escHtml(t)}</span>`).join("");
+
+  const valueItems = [...new Set((a.tags || []).concat((v.benefits || []).slice(0, 4)))];
+  const valueSection = document.getElementById("valueSection");
+  if(valueItems.length){
+    valueSection.hidden = false;
+    document.getElementById("detailValues").innerHTML = valueItems.map(x => `<span class="value-item">${escHtml(x)}</span>`).join("");
+  } else {
+    valueSection.hidden = true;
+  }
+
+  const channels = document.getElementById("detailChannels");
+  const contact = v.contact || "";
+  if(contact){
+    channels.innerHTML = `<div class="channel-item"><strong>官方/报名渠道：</strong>${escHtml(contact)}</div>`;
+  } else {
+    channels.innerHTML = `<div class="channel-item"><strong>官网与报名：</strong>活动方尚未公布公开渠道，页面同步后会自动显示。</div>`;
+  }
+
+  const volBox = document.getElementById("detailVolunteer");
+  if(s.open){
+    volBox.innerHTML = `
+      <div class="vol-detail-box">
+        <div class="detail-section-head" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <strong style="color:var(--vol);">招募中</strong>
+          <span class="detail-tag" style="background:rgba(184,146,42,.12);color:var(--vol);">拟招募 ${v.count || 0} 人</span>
+        </div>
+        <div class="role-line">${(v.roles || []).map(r => `<span class="vol-role-chip">${escHtml(r)}</span>`).join("")}</div>
+        <div class="vol-meta-line"><div>报名截止：${v.deadline ? fullDate(v.deadline) : "以官方通知为准"}</div><div>官方渠道：${escHtml(v.contact || "待公布")}</div></div>
+        ${(v.benefits || []).length ? `<div style="font-size:13px;color:var(--text-secondary);line-height:1.7;"><strong style="color:var(--vol);">志愿者福利：</strong>${v.benefits.map(b => escHtml(b)).join("、")}</div>` : ""}
+      </div>`;
+  } else if(s.closed){
+    volBox.innerHTML = `<div class="vol-detail-box" style="background:var(--bg-soft);border-color:var(--border);"><strong style="color:var(--text-muted);">报名已截止</strong><p style="margin-top:6px;font-size:13px;color:var(--text-secondary);line-height:1.7;">志愿者报名已于 ${fullDate(v.deadline)} 截止，请关注活动方后续通知。</p></div>`;
+  } else {
+    volBox.innerHTML = `<div class="vol-detail-box" style="background:var(--bg-soft);border-color:var(--border);"><strong style="color:var(--text-muted);">暂无志愿者招募</strong><p style="margin-top:6px;font-size:13px;color:var(--text-secondary);line-height:1.7;">该活动当前没有公开志愿者岗位，可持续关注活动详情页同步。</p></div>`;
+  }
+
+  const website = findWebsite(contact);
+  const applyBtn = document.getElementById("detailApplyBtn");
+  applyBtn.hidden = !website && !contact;
+  applyBtn.textContent = website ? "打开官网" : "复制报名渠道";
+  applyBtn.onclick = () => {
+    if(website){
+      if(isNativeContainer() && window.open){
+        const w = window.open(website, "_system");
+        if(!w) window.location.href = website;
+      } else {
+        window.open(website, "_blank", "noopener,noreferrer");
+      }
+      return;
+    }
+    copyText(contact, "官方报名渠道已复制");
+  };
+  document.getElementById("detailCopyBtn").onclick = () => copyText(buildActivityInfo(a), "活动详情已复制");
+  document.title = `${a.title} · 活动雷达`;
+}
+
+function useGeolocation(){
+  const btn = document.getElementById("locBtn");
+  if(!btn) return;
+  const label = btn.querySelector("span");
+  const setBusy = busy => {
+    btn.classList.toggle("locating", busy);
+    if(label) label.textContent = busy ? "定位中" : "定位";
+  };
+  setBusy(true);
+  const applyPosition = (lat, lng) => {
+    let nearest = null, minDist = Infinity;
+    for(const [city, coord] of Object.entries(cityCoords)){
+      const d = distance(lat, lng, coord.lat, coord.lng);
+      if(d < minDist){ minDist = d; nearest = city; }
+    }
+    if(nearest && minDist <= 500){
+      selectCity(nearest);
+      showToast(`已定位到 ${nearest}，距您约 ${minDist.toFixed(0)} 公里`);
+    } else {
+      selectCity("全部");
+      showToast("当前位置不在支持城市附近，已为您显示全部活动");
+    }
+    setBusy(false);
+  };
+  const fail = () => {
+    setBusy(false);
+    showToast("定位失败，请检查定位权限和系统定位开关后重试");
+  };
+  if(isNativeContainer()){
+    const plugin = registerNativeGeolocationPlugin();
+    const runNative = async () => {
+      try {
+        if(!plugin) throw new Error("no plugin");
+        try {
+          const perm = await plugin.checkPermissions();
+          const granted = perm && (perm.location === "granted" || perm.coarseLocation === "granted");
+          if(!granted){
+            try {
+              const req = await plugin.requestPermissions({ permissions: ["location", "coarseLocation"] });
+              const afterGranted = req && (req.location === "granted" || req.coarseLocation === "granted");
+              if(!afterGranted) throw new Error("denied");
+            } catch(e) { throw new Error("denied"); }
+          }
+        } catch(e) {
+          if(e && e.message === "denied") throw e;
+        }
+        const pos = await plugin.getCurrentPosition({ enableHighAccuracy: false, timeout: 15000, maximumAge: 60000 });
+        applyPosition(pos.coords.latitude, pos.coords.longitude);
+      } catch(_) {
+        if(navigator.geolocation){
+          navigator.geolocation.getCurrentPosition(pos => applyPosition(pos.coords.latitude, pos.coords.longitude), fail, { timeout: 10000, maximumAge: 60000 });
+        } else {
+          fail();
+        }
+      }
+    };
+    runNative();
+    return;
+  }
+  if(!navigator.geolocation){ setBusy(false); showToast("当前浏览器不支持定位"); return; }
+  navigator.geolocation.getCurrentPosition(pos => applyPosition(pos.coords.latitude, pos.coords.longitude), fail, { timeout: 10000, maximumAge: 60000, enableHighAccuracy: false });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const back = document.getElementById("detailBack");
+  const refreshBtn = document.getElementById("refreshBtn");
+  if(back) back.addEventListener("click", goHome);
+  if(refreshBtn){
+    refreshBtn.addEventListener("click", async () => {
+      refreshBtn.classList.add("checking");
+      await loadRemoteData({ quiet: false });
+      refreshBtn.classList.remove("checking");
+    });
+  }
+  window.addEventListener("popstate", handleHash);
+  window.addEventListener("hashchange", handleHash);
+  if(location.hash) handleHash();
+  if(isNativeContainer()) registerNativeGeolocationPlugin();
+});
+document.addEventListener("visibilitychange", () => {
+  if(document.visibilityState === "visible" && !document.getElementById("detailPage").hidden) refreshOpenDetail();
 });
 </script>
 </body>
