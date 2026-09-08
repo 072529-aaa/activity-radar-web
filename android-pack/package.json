@@ -1,6 +1,6 @@
 {
   "name": "activity-radar-apk",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "private": true,
   "description": "Capacitor wrapper for 活动雷达 ActivityRadar",
   "scripts": {

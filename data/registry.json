@@ -1,115 +1,72 @@
 {
-  "schemaVersion": 2,
-  "updatedAt": "2026-09-08T13:43:59+08:00",
-  "source": "activity-radar-web/official-registry",
-  "generator": "radar-official-sync",
-  "fallback": false,
   "meta": {
-    "refreshMinutes": 240,
+    "engine": "activity-radar-official-registry",
+    "schemaVersion": 2,
     "sources": [
       {
         "name": "中国马拉松 / 中国田径协会认证赛事平台",
         "url": "https://mls.chinaath.com/",
-        "kind": "official",
-        "checkedAt": "2026-09-08T13:43:59+08:00",
-        "ok": null,
-        "httpStatus": null
+        "kind": "official"
       },
       {
         "name": "中国田径协会官网",
         "url": "https://www.athletics.org.cn/",
-        "kind": "official",
-        "checkedAt": "2026-09-08T13:43:59+08:00",
-        "ok": null,
-        "httpStatus": null
+        "kind": "official"
       },
       {
         "name": "上马网",
         "url": "https://www.shang-ma.com/",
-        "kind": "official",
-        "checkedAt": "2026-09-08T13:43:59+08:00",
-        "ok": null,
-        "httpStatus": null
+        "kind": "official"
       },
       {
         "name": "广州马拉松赛官网",
         "url": "https://www.guangzhou-marathon.com/",
-        "kind": "official",
-        "checkedAt": "2026-09-08T13:43:59+08:00",
-        "ok": null,
-        "httpStatus": null
+        "kind": "official"
       },
       {
         "name": "杭州马拉松官网",
         "url": "https://hm.zhetiyu.cn/",
-        "kind": "official",
-        "checkedAt": "2026-09-08T13:43:59+08:00",
-        "ok": null,
-        "httpStatus": null
+        "kind": "official"
       },
       {
         "name": "南京马拉松官网",
         "url": "https://www.nj-marathon.cn/",
-        "kind": "official",
-        "checkedAt": "2026-09-08T13:43:59+08:00",
-        "ok": null,
-        "httpStatus": null
+        "kind": "official"
       },
       {
         "name": "上海志愿者网",
         "url": "https://www.volunteer.sh.cn/",
-        "kind": "official",
-        "checkedAt": "2026-09-08T13:43:59+08:00",
-        "ok": null,
-        "httpStatus": null
+        "kind": "official"
       },
       {
         "name": "GOSIM Shenzhen 2026",
         "url": "https://shenzhen2026.gosim.org/",
-        "kind": "official",
-        "checkedAt": "2026-09-08T13:43:59+08:00",
-        "ok": null,
-        "httpStatus": null
+        "kind": "official"
       },
       {
         "name": "奇点智能技术大会",
         "url": "https://ml-summit.org/",
-        "kind": "official",
-        "checkedAt": "2026-09-08T13:43:59+08:00",
-        "ok": null,
-        "httpStatus": null
+        "kind": "official"
       },
       {
         "name": "AI Maker Summit",
         "url": "https://aimakersummit.com/",
-        "kind": "official",
-        "checkedAt": "2026-09-08T13:43:59+08:00",
-        "ok": null,
-        "httpStatus": null
+        "kind": "official"
       },
       {
         "name": "深圳马拉松官网",
         "url": "http://shenzhenmarathon.org.cn/",
-        "kind": "official",
-        "checkedAt": "2026-09-08T13:43:59+08:00",
-        "ok": null,
-        "httpStatus": null
+        "kind": "official"
       },
       {
         "name": "横琴人寿横琴马拉松官网",
         "url": "https://www.hengqinmarathon.com/",
-        "kind": "official",
-        "checkedAt": "2026-09-08T13:43:59+08:00",
-        "ok": null,
-        "httpStatus": null
+        "kind": "official"
       },
       {
         "name": "福州马拉松官网",
         "url": "https://www.fuzhou-marathon.com/",
-        "kind": "official",
-        "checkedAt": "2026-09-08T13:43:59+08:00",
-        "ok": null,
-        "httpStatus": null
+        "kind": "official"
       }
     ]
   },
@@ -126,12 +83,7 @@
       "endDate": "2026-11-10",
       "organizer": "中国国际进口博览局 / 上海市志愿者协会",
       "description": "上海志愿者网官方公告招募具有行业经验、外语能力、跨文化沟通能力和志愿情怀的专业志愿者，服务第九届进博会，覆盖医疗展区、消费品展区等专业服务保障工作。",
-      "tags": [
-        "官方志愿者",
-        "专业志愿者",
-        "展会服务",
-        "上海进博会"
-      ],
+      "tags": ["官方志愿者", "专业志愿者", "展会服务", "上海进博会"],
       "register": {
         "status": "open",
         "deadline": "",
@@ -142,19 +94,10 @@
       },
       "volunteer": {
         "recruiting": true,
-        "roles": [
-          "专业志愿者",
-          "展区服务",
-          "语言服务",
-          "行业讲解"
-        ],
+        "roles": ["专业志愿者", "展区服务", "语言服务", "行业讲解"],
         "count": 0,
         "deadline": "",
-        "benefits": [
-          "官方志愿服务保障",
-          "志愿服务证明",
-          "国际展会实践机会"
-        ],
+        "benefits": ["官方志愿服务保障", "志愿服务证明", "国际展会实践机会"],
         "requirements": "以官方公告为准，需具备相应行业经验、外语能力或跨文化沟通能力。",
         "registerUrl": "https://www.volunteer.sh.cn/zyzxw/2026/08/29/2ada1320-9c94-434e-91ac-135f637484fe.shtml",
         "registerChannel": "上海志愿者网官方公告",
@@ -163,12 +106,7 @@
       "officialUrl": "https://www.volunteer.sh.cn/zyzxw/2026/08/29/2ada1320-9c94-434e-91ac-135f637484fe.shtml",
       "sourceName": "上海志愿者网",
       "sourceKind": "official",
-      "verified": true,
-      "schemaVersion": 2,
-      "updatedAt": "2026-09-08T13:43:59+08:00",
-      "lastChecked": "2026-09-08T13:43:59+08:00",
-      "source": "上海志愿者网",
-      "sourceUrl": "https://www.volunteer.sh.cn/zyzxw/2026/08/29/2ada1320-9c94-434e-91ac-135f637484fe.shtml"
+      "verified": true
     },
     {
       "id": 902,
@@ -182,12 +120,7 @@
       "endDate": "2026-09-12",
       "organizer": "AI Maker Summit 组委会",
       "description": "面向 AI 工程师与应用开发者的技术峰会，围绕 AI 工程实践、Agent 应用与开发者生态设置主题演讲、案例分享与交流环节。",
-      "tags": [
-        "AI 工程师",
-        "开发者大会",
-        "Agent",
-        "技术峰会"
-      ],
+      "tags": ["AI 工程师", "开发者大会", "Agent", "技术峰会"],
       "register": {
         "status": "open",
         "deadline": "",
@@ -210,12 +143,7 @@
       "officialUrl": "https://aimakersummit.com/",
       "sourceName": "AI Maker Summit 官网",
       "sourceKind": "official",
-      "verified": true,
-      "schemaVersion": 2,
-      "updatedAt": "2026-09-08T13:43:59+08:00",
-      "lastChecked": "2026-09-08T13:43:59+08:00",
-      "source": "AI Maker Summit 官网",
-      "sourceUrl": "https://aimakersummit.com/"
+      "verified": true
     },
     {
       "id": 903,
@@ -229,12 +157,7 @@
       "endDate": "2026-10-17",
       "organizer": "GOSIM Foundation",
       "description": "面向全球开发者的开源 AI、机器人、边缘系统与开发者基础设施大会，设置会议、工作坊与开源项目交流，150+ 讲者、2000+ 开发者参与。",
-      "tags": [
-        "开源",
-        "AI",
-        "机器人",
-        "开发者社区"
-      ],
+      "tags": ["开源", "AI", "机器人", "开发者社区"],
       "register": {
         "status": "open",
         "deadline": "",
@@ -257,12 +180,7 @@
       "officialUrl": "https://shenzhen2026.gosim.org/",
       "sourceName": "GOSIM Shenzhen 2026 官网",
       "sourceKind": "official",
-      "verified": true,
-      "schemaVersion": 2,
-      "updatedAt": "2026-09-08T13:43:59+08:00",
-      "lastChecked": "2026-09-08T13:43:59+08:00",
-      "source": "GOSIM Shenzhen 2026 官网",
-      "sourceUrl": "https://shenzhen2026.gosim.org/"
+      "verified": true
     },
     {
       "id": 904,
@@ -276,12 +194,7 @@
       "endDate": "2026-11-21",
       "organizer": "CSDN / 奇点智能研究院",
       "description": "聚焦 Agentic Scaling、AI Infra、世界模型、具身智能与 Physical AI 等技术方向的技术大会，同期举办 C++ 及系统软件技术大会，含专题演讲、实践分享与现场交流。",
-      "tags": [
-        "Agent",
-        "AI Infra",
-        "大模型",
-        "开发者大会"
-      ],
+      "tags": ["Agent", "AI Infra", "大模型", "开发者大会"],
       "register": {
         "status": "open",
         "deadline": "",
@@ -304,12 +217,7 @@
       "officialUrl": "https://ml-summit.org/",
       "sourceName": "奇点智能技术大会官网",
       "sourceKind": "official",
-      "verified": true,
-      "schemaVersion": 2,
-      "updatedAt": "2026-09-08T13:43:59+08:00",
-      "lastChecked": "2026-09-08T13:43:59+08:00",
-      "source": "奇点智能技术大会官网",
-      "sourceUrl": "https://ml-summit.org/"
+      "verified": true
     },
     {
       "id": 905,
@@ -323,12 +231,7 @@
       "endDate": "2026-12-06",
       "organizer": "上海马拉松组委会",
       "description": "世界田联白金标马拉松赛事，2026 上海马拉松在外滩金牛广场起跑，设全程马拉松与竞速轮椅马拉松等组别，赛事规模提升至 30000 人。",
-      "tags": [
-        "白金标赛事",
-        "全程马拉松",
-        "上海外滩",
-        "官方赛事"
-      ],
+      "tags": ["白金标赛事", "全程马拉松", "上海外滩", "官方赛事"],
       "register": {
         "status": "announced",
         "deadline": "",
@@ -351,12 +254,7 @@
       "officialUrl": "https://www.shang-ma.com/",
       "sourceName": "上马网",
       "sourceKind": "official",
-      "verified": true,
-      "schemaVersion": 2,
-      "updatedAt": "2026-09-08T13:43:59+08:00",
-      "lastChecked": "2026-09-08T13:43:59+08:00",
-      "source": "上马网",
-      "sourceUrl": "https://www.shang-ma.com/"
+      "verified": true
     },
     {
       "id": 906,
@@ -370,12 +268,7 @@
       "endDate": "2026-12-20",
       "organizer": "广州马拉松赛组委会",
       "description": "世界田联金标马拉松赛事，2026 广州马拉松规模扩大至 30000 人，设全程马拉松项目，比赛分四枪起跑，终点为海心沙。",
-      "tags": [
-        "世界田联金标",
-        "全程马拉松",
-        "广州天河",
-        "官方赛事"
-      ],
+      "tags": ["世界田联金标", "全程马拉松", "广州天河", "官方赛事"],
       "register": {
         "status": "open",
         "deadline": "2026-09-11",
@@ -398,12 +291,7 @@
       "officialUrl": "https://www.guangzhou-marathon.com/",
       "sourceName": "广州马拉松赛官网",
       "sourceKind": "official",
-      "verified": true,
-      "schemaVersion": 2,
-      "updatedAt": "2026-09-08T13:43:59+08:00",
-      "lastChecked": "2026-09-08T13:43:59+08:00",
-      "source": "广州马拉松赛官网",
-      "sourceUrl": "https://www.guangzhou-marathon.com/"
+      "verified": true
     },
     {
       "id": 907,
@@ -417,12 +305,7 @@
       "endDate": "2026-11-01",
       "organizer": "杭州马拉松组委会",
       "description": "2026 杭州马拉松于黄龙体育中心鸣枪，设全程马拉松与半程马拉松等项目，参赛规模约 36000 人。",
-      "tags": [
-        "全程马拉松",
-        "半程马拉松",
-        "杭州黄龙",
-        "官方赛事"
-      ],
+      "tags": ["全程马拉松", "半程马拉松", "杭州黄龙", "官方赛事"],
       "register": {
         "status": "closed",
         "deadline": "2026-07-15",
@@ -445,12 +328,7 @@
       "officialUrl": "https://hm.zhetiyu.cn/",
       "sourceName": "杭州马拉松官网",
       "sourceKind": "official",
-      "verified": true,
-      "schemaVersion": 2,
-      "updatedAt": "2026-09-08T13:43:59+08:00",
-      "lastChecked": "2026-09-08T13:43:59+08:00",
-      "source": "杭州马拉松官网",
-      "sourceUrl": "https://hm.zhetiyu.cn/"
+      "verified": true
     },
     {
       "id": 908,
@@ -464,12 +342,7 @@
       "endDate": "2026-11-22",
       "organizer": "南京马拉松组委会",
       "description": "2026 南京马拉松设全程马拉松项目，规模 26000 人，报名通过南京马拉松官网或官方合作平台完成。",
-      "tags": [
-        "全程马拉松",
-        "南京奥体",
-        "官方赛事",
-        "26000人"
-      ],
+      "tags": ["全程马拉松", "南京奥体", "官方赛事", "26000人"],
       "register": {
         "status": "closed",
         "deadline": "2026-08-28",
@@ -492,12 +365,7 @@
       "officialUrl": "https://www.nj-marathon.cn/",
       "sourceName": "南京马拉松官网",
       "sourceKind": "official",
-      "verified": true,
-      "schemaVersion": 2,
-      "updatedAt": "2026-09-08T13:43:59+08:00",
-      "lastChecked": "2026-09-08T13:43:59+08:00",
-      "source": "南京马拉松官网",
-      "sourceUrl": "https://www.nj-marathon.cn/"
+      "verified": true
     },
     {
       "id": 909,
@@ -511,12 +379,7 @@
       "endDate": "2026-12-06",
       "organizer": "深圳马拉松组委会",
       "description": "深圳马拉松官方赛事，世界田联金标马拉松。2026 深圳马拉松以深圳市民中心为起点，官方报名时间为 9 月 3 日 10:00 至 9 月 18 日 17:00。",
-      "tags": [
-        "世界田联金标",
-        "全程马拉松",
-        "深圳市民中心",
-        "官方赛事"
-      ],
+      "tags": ["世界田联金标", "全程马拉松", "深圳市民中心", "官方赛事"],
       "register": {
         "status": "open",
         "opensAt": "2026-09-03T10:00:00+08:00",
@@ -540,12 +403,7 @@
       "officialUrl": "http://shenzhenmarathon.org.cn/contentDetail.html?detailId=7954015057255596&topicId=6990424010986444&appKey=shenzhenMarathon",
       "sourceName": "深圳马拉松官网",
       "sourceKind": "official",
-      "verified": true,
-      "schemaVersion": 2,
-      "updatedAt": "2026-09-08T13:43:59+08:00",
-      "lastChecked": "2026-09-08T13:43:59+08:00",
-      "source": "深圳马拉松官网",
-      "sourceUrl": "http://shenzhenmarathon.org.cn/contentDetail.html?detailId=7954015057255596&topicId=6990424010986444&appKey=shenzhenMarathon"
+      "verified": true
     },
     {
       "id": 910,
@@ -559,12 +417,7 @@
       "endDate": "2026-12-27",
       "organizer": "横琴马拉松组委会",
       "description": "横琴人寿横琴马拉松官方赛事，设马拉松、半程马拉松等项目，报名时间为 8 月 18 日 10:00 至 9 月 12 日 22:00，采用预报名与抽签确认方式。",
-      "tags": [
-        "全程马拉松",
-        "半程马拉松",
-        "横琴",
-        "官方赛事"
-      ],
+      "tags": ["全程马拉松", "半程马拉松", "横琴", "官方赛事"],
       "register": {
         "status": "open",
         "opensAt": "2026-08-18T10:00:00+08:00",
@@ -588,12 +441,7 @@
       "officialUrl": "https://www.hengqinmarathon.com/race-256",
       "sourceName": "横琴人寿横琴马拉松官网",
       "sourceKind": "official",
-      "verified": true,
-      "schemaVersion": 2,
-      "updatedAt": "2026-09-08T13:43:59+08:00",
-      "lastChecked": "2026-09-08T13:43:59+08:00",
-      "source": "横琴人寿横琴马拉松官网",
-      "sourceUrl": "https://www.hengqinmarathon.com/race-256"
+      "verified": true
     },
     {
       "id": 911,
@@ -607,14 +455,9 @@
       "endDate": "2026-12-27",
       "organizer": "福州马拉松组委会",
       "description": "2026 福州马拉松设马拉松、半程马拉松等项目，预报名时间为 9 月 10 日 20:00 至 9 月 19 日 17:00，采用预报名、抽签、中签后缴费方式。",
-      "tags": [
-        "全程马拉松",
-        "半程马拉松",
-        "福州",
-        "官方赛事"
-      ],
+      "tags": ["全程马拉松", "半程马拉松", "福州", "官方赛事"],
       "register": {
-        "status": "announced",
+        "status": "scheduled",
         "opensAt": "2026-09-10T20:00:00+08:00",
         "deadline": "2026-09-19T17:00:00+08:00",
         "url": "https://www.fuzhou-marathon.com/",
@@ -636,12 +479,7 @@
       "officialUrl": "https://www.fuzhou-marathon.com/",
       "sourceName": "福州马拉松官网",
       "sourceKind": "official",
-      "verified": true,
-      "schemaVersion": 2,
-      "updatedAt": "2026-09-08T13:43:59+08:00",
-      "lastChecked": "2026-09-08T13:43:59+08:00",
-      "source": "福州马拉松官网",
-      "sourceUrl": "https://www.fuzhou-marathon.com/"
+      "verified": true
     }
   ]
 }

@@ -564,6 +564,7 @@ body {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
 </style>
+<link rel="stylesheet" href="radar-v23.css">
 </head>
 <body>
 <nav class="nav">
@@ -748,7 +749,7 @@ const builtinActivities = [
   { id:30, type:"ai", category:"技术沙龙", city:"武汉", isWuhan:true, title:"AIGC商业化路径探索沙龙·武汉站", location:"武汉汉口江滩·共享空间", date:"2026-09-14", endDate:"2026-09-14", organizer:"武汉创业者协会 / 光谷AI俱乐部", description:"聚焦AIGC商业化落地，邀请本地AI创业者分享AI漫剧变现、智能体SaaS、AI内容工厂等实战案例，设置项目路演与投资人面对面环节。", tags:["AIGC","商业化","创业沙龙","项目路演"], volunteer:{recruiting:true, roles:["签到接待","现场执行","摄影记录","嘉宾对接"], count:15, deadline:"2026-09-10", benefits:["免费参会","创业者人脉","活动证书"], contact:"微信：光谷AI俱乐部"} }
 ];
 let activities = builtinActivities.slice();
-const cityCoords = { "武汉":{lat:30.5928,lng:114.3055}, "北京":{lat:39.9042,lng:116.4074}, "上海":{lat:31.2304,lng:121.4737}, "广州":{lat:23.1291,lng:113.2644}, "深圳":{lat:22.5431,lng:114.0579}, "杭州":{lat:30.2741,lng:120.1551}, "成都":{lat:30.5728,lng:104.0668}, "南京":{lat:32.0603,lng:118.7969}, "长沙":{lat:28.2282,lng:112.9388}, "重庆":{lat:29.5630,lng:106.5516}, "合肥":{lat:31.8206,lng:117.2272}, "厦门":{lat:24.4798,lng:118.0894} };
+const cityCoords = { "武汉":{lat:30.5928,lng:114.3055}, "北京":{lat:39.9042,lng:116.4074}, "上海":{lat:31.2304,lng:121.4737}, "广州":{lat:23.1291,lng:113.2644}, "深圳":{lat:22.5431,lng:114.0579}, "杭州":{lat:30.2741,lng:120.1551}, "成都":{lat:30.5728,lng:104.0668}, "南京":{lat:32.0603,lng:118.7969}, "长沙":{lat:28.2282,lng:112.9388}, "重庆":{lat:29.5630,lng:106.5516}, "合肥":{lat:31.8206,lng:117.2272}, "厦门":{lat:24.4798,lng:118.0894}, "珠海":{lat:22.2707,lng:113.5767}, "福州":{lat:26.0745,lng:119.2965}, "天津":{lat:39.3434,lng:117.3616}, "南昌":{lat:28.6820,lng:115.8579}, "西安":{lat:34.3416,lng:108.9398}, "青岛":{lat:36.0671,lng:120.3826} };
 const state = { currentCity:"武汉", typeFilter:"all", timeFilter:"all", searchQuery:"", sortBy:"date" };
 let cities = ["武汉","北京","上海","广州","深圳","杭州","成都","南京","长沙","重庆","合肥","厦门"];
 const DATA_CACHE_KEY = "activity-radar-data-v2";
@@ -896,12 +897,14 @@ function setChipPressed(root){root.querySelectorAll('.filter-chip').forEach(c=>c
 function setSectionTitle(){const labels={all:'全部活动',ai:'AI 活动',marathon:'马拉松赛事',volunteer:'志愿者招募'};document.getElementById('sectionTitleText').textContent=labels[state.typeFilter]||'全部活动';}
 document.addEventListener('DOMContentLoaded',()=>{const cityBtn=document.getElementById('cityBtn'),cityDropdown=document.getElementById('cityDropdown'),cityList=document.getElementById('cityList'),modalOverlay=document.getElementById('modalOverlay'),modal=document.getElementById('modal');cityList.setAttribute('role','listbox');cityBtn.addEventListener('click',e=>{e.stopPropagation();const open=cityDropdown.classList.toggle('open');cityBtn.setAttribute('aria-expanded',String(open));});document.addEventListener('click',e=>{if(!cityDropdown.contains(e.target)&&!cityBtn.contains(e.target)){cityDropdown.classList.remove('open');cityBtn.setAttribute('aria-expanded','false');}});document.getElementById('locBtn').addEventListener('click',useGeolocation);const typeFilters=document.getElementById('typeFilters'),timeFilters=document.getElementById('timeFilters');typeFilters.addEventListener('click',e=>{const chip=e.target.closest('.filter-chip');if(!chip)return;typeFilters.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));chip.classList.add('active');setChipPressed(typeFilters);state.typeFilter=chip.dataset.type;const zone=document.getElementById('volunteerZone'),sec=document.getElementById('activitySection');if(state.typeFilter==="volunteer"){zone.classList.add('active');sec.style.display='none';}else{zone.classList.remove('active');sec.style.display='block';}setSectionTitle();renderList();renderVolZone();});timeFilters.addEventListener('click',e=>{const chip=e.target.closest('.filter-chip');if(!chip)return;timeFilters.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));chip.classList.add('active');setChipPressed(timeFilters);state.timeFilter=chip.dataset.time;renderList();renderVolZone();});document.getElementById('sortSelect').addEventListener('change',e=>{state.sortBy=e.target.value;renderList();renderVolZone();});let st;document.getElementById('searchInput').addEventListener('input',e=>{clearTimeout(st);st=setTimeout(()=>{state.searchQuery=e.target.value.trim();renderList();renderVolZone();},200);});document.getElementById('modalClose').addEventListener('click',closeModal);modalOverlay.addEventListener('click',e=>{if(e.target===modalOverlay)closeModal();});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modalOverlay.classList.contains('open')){closeModal();return;}if(e.key==='Tab'&&modalOverlay.classList.contains('open')){const focusables=[...modal.querySelectorAll('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])')].filter(el=>!el.disabled&&el.getClientRects().length);if(!focusables.length)return;const first=focusables[0],last=focusables[focusables.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}});setChipPressed(typeFilters);setChipPressed(timeFilters);renderCities();updateStats();renderList();renderVolZone();setSectionTitle();if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{});}});
 document.addEventListener('DOMContentLoaded',()=>{
-  renderDataMeta();
-  loadRemoteData({ quiet: true });
-  setInterval(() => loadRemoteData({ quiet: true }), DATA_REFRESH_MS);
-  document.addEventListener('visibilitychange', () => {
-    if(document.visibilityState === 'visible') loadRemoteData({ quiet: true });
-  });
+  if(!document.querySelector('script[src="radar-v23.js"]')){
+    renderDataMeta();
+    loadRemoteData({ quiet: true });
+    setInterval(() => loadRemoteData({ quiet: true }), DATA_REFRESH_MS);
+    document.addEventListener('visibilitychange', () => {
+      if(document.visibilityState === 'visible') loadRemoteData({ quiet: true });
+    });
+  }
 });
 /* ===== v2.2 mobile/Android + 简卡详情页增强 ===== */
 const DATA_CACHE_KEY_V3 = "activity-radar-data-v3";
@@ -1289,5 +1292,6 @@ document.addEventListener("visibilitychange", () => {
   if(document.visibilityState === "visible" && !document.getElementById("detailPage").hidden) refreshOpenDetail();
 });
 </script>
+<script src="radar-v23.js"></script>
 </body>
 </html>

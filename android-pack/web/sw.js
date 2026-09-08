@@ -1,5 +1,5 @@
 // Service Worker - 活动雷达
-const CACHE_NAME = 'activity-radar-v4';
+const CACHE_NAME = 'activity-radar-v5';
 const ASSETS = [
   './',
   './index.html',
@@ -7,6 +7,8 @@ const ASSETS = [
   './icon.svg',
   './icons/icon-192.png',
   './icons/icon-512.png',
+  './radar-v23.css',
+  './radar-v23.js',
   './data/activities.json'
 ];
 

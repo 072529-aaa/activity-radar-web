@@ -1,1042 +1,647 @@
 {
-  "updatedAt": "2026-09-04T00:52:41.774Z",
-  "source": "activity-radar-web/data",
+  "schemaVersion": 2,
+  "updatedAt": "2026-09-08T13:43:59+08:00",
+  "source": "activity-radar-web/official-registry",
+  "generator": "radar-official-sync",
+  "fallback": false,
+  "meta": {
+    "refreshMinutes": 240,
+    "sources": [
+      {
+        "name": "中国马拉松 / 中国田径协会认证赛事平台",
+        "url": "https://mls.chinaath.com/",
+        "kind": "official",
+        "checkedAt": "2026-09-08T13:43:59+08:00",
+        "ok": null,
+        "httpStatus": null
+      },
+      {
+        "name": "中国田径协会官网",
+        "url": "https://www.athletics.org.cn/",
+        "kind": "official",
+        "checkedAt": "2026-09-08T13:43:59+08:00",
+        "ok": null,
+        "httpStatus": null
+      },
+      {
+        "name": "上马网",
+        "url": "https://www.shang-ma.com/",
+        "kind": "official",
+        "checkedAt": "2026-09-08T13:43:59+08:00",
+        "ok": null,
+        "httpStatus": null
+      },
+      {
+        "name": "广州马拉松赛官网",
+        "url": "https://www.guangzhou-marathon.com/",
+        "kind": "official",
+        "checkedAt": "2026-09-08T13:43:59+08:00",
+        "ok": null,
+        "httpStatus": null
+      },
+      {
+        "name": "杭州马拉松官网",
+        "url": "https://hm.zhetiyu.cn/",
+        "kind": "official",
+        "checkedAt": "2026-09-08T13:43:59+08:00",
+        "ok": null,
+        "httpStatus": null
+      },
+      {
+        "name": "南京马拉松官网",
+        "url": "https://www.nj-marathon.cn/",
+        "kind": "official",
+        "checkedAt": "2026-09-08T13:43:59+08:00",
+        "ok": null,
+        "httpStatus": null
+      },
+      {
+        "name": "上海志愿者网",
+        "url": "https://www.volunteer.sh.cn/",
+        "kind": "official",
+        "checkedAt": "2026-09-08T13:43:59+08:00",
+        "ok": null,
+        "httpStatus": null
+      },
+      {
+        "name": "GOSIM Shenzhen 2026",
+        "url": "https://shenzhen2026.gosim.org/",
+        "kind": "official",
+        "checkedAt": "2026-09-08T13:43:59+08:00",
+        "ok": null,
+        "httpStatus": null
+      },
+      {
+        "name": "奇点智能技术大会",
+        "url": "https://ml-summit.org/",
+        "kind": "official",
+        "checkedAt": "2026-09-08T13:43:59+08:00",
+        "ok": null,
+        "httpStatus": null
+      },
+      {
+        "name": "AI Maker Summit",
+        "url": "https://aimakersummit.com/",
+        "kind": "official",
+        "checkedAt": "2026-09-08T13:43:59+08:00",
+        "ok": null,
+        "httpStatus": null
+      },
+      {
+        "name": "深圳马拉松官网",
+        "url": "http://shenzhenmarathon.org.cn/",
+        "kind": "official",
+        "checkedAt": "2026-09-08T13:43:59+08:00",
+        "ok": null,
+        "httpStatus": null
+      },
+      {
+        "name": "横琴人寿横琴马拉松官网",
+        "url": "https://www.hengqinmarathon.com/",
+        "kind": "official",
+        "checkedAt": "2026-09-08T13:43:59+08:00",
+        "ok": null,
+        "httpStatus": null
+      },
+      {
+        "name": "福州马拉松官网",
+        "url": "https://www.fuzhou-marathon.com/",
+        "kind": "official",
+        "checkedAt": "2026-09-08T13:43:59+08:00",
+        "ok": null,
+        "httpStatus": null
+      }
+    ]
+  },
   "items": [
     {
-      "id": 1,
-      "type": "ai",
-      "category": "博览会",
-      "city": "武汉",
-      "isWuhan": true,
-      "title": "2026武汉（国际）人工智能与机器人博览会",
-      "location": "武汉国际博览中心",
-      "date": "2026-09-04",
-      "endDate": "2026-09-06",
-      "organizer": "武汉市人民政府 / 中国人工智能学会",
-      "description": "华中地区规模最大的AI与机器人专业展会，设置工业智能装备、商业服务机器人等七大展区，汇聚500余家企业，同期举办AI大模型工业落地会议与人工智能应用峰会。",
-      "tags": [
-        "大模型",
-        "机器人",
-        "工业落地",
-        "具身智能"
-      ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "展会引导",
-          "技术翻译",
-          "媒体接待",
-          "会场服务"
-        ],
-        "count": 120,
-        "deadline": "2026-08-30",
-        "benefits": [
-          "志愿者证书",
-          "免费餐饮",
-          "展会纪念品",
-          "优先参与行业交流"
-        ],
-        "contact": "志愿者邮箱：volunteer@wuhan-ai-expo.com"
-      }
-    },
-    {
-      "id": 2,
-      "type": "ai",
-      "category": "产业大会",
-      "city": "武汉",
-      "isWuhan": true,
-      "title": "聚合智能产业发展大会2026",
-      "location": "武汉光谷科技会展中心",
-      "date": "2026-09-08",
-      "endDate": "2026-09-09",
-      "organizer": "武汉东湖新技术开发区管委会",
-      "description": "聚焦聚合智能产业生态，开设具身机器人与产业协同发展论坛、AI与行业融合论坛，涉及智能体在车载、工业、政务场景的落地实践，同步设置产业对接与项目路演。",
-      "tags": [
-        "聚合智能",
-        "具身机器人",
-        "产业对接",
-        "项目路演"
-      ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "签到接待",
-          "论坛会务",
-          "路演协助",
-          "嘉宾引导"
-        ],
-        "count": 60,
-        "deadline": "2026-09-01",
-        "benefits": [
-          "大会证书",
-          "工作餐",
-          "行业人脉拓展"
-        ],
-        "contact": "报名电话：027-8765xxxx"
-      }
-    },
-    {
-      "id": 3,
-      "type": "ai",
-      "category": "博览会",
-      "city": "武汉",
-      "isWuhan": true,
-      "title": "武汉AI系列博览会（三展联动）",
-      "location": "武汉国际博览中心",
-      "date": "2026-09-22",
-      "endDate": "2026-09-24",
-      "organizer": "湖北省经信厅 / 武汉市科技局",
-      "description": "武汉国际AI应用及消费电子博览会、中国(武汉)国际AI算力应用产业博览会、武汉国际人形机器人与具身智能展览会三展联动，1200余家展商参展，配套具身智能大模型现场推理秀。",
-      "tags": [
-        "AI应用",
-        "算力",
-        "人形机器人",
-        "消费电子"
-      ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "展区服务",
-          "技术支持助理",
-          "观众引导",
-          "后勤保障"
-        ],
-        "count": 200,
-        "deadline": "2026-09-15",
-        "benefits": [
-          "志愿服务证明",
-          "三餐保障",
-          "交通补贴",
-          "展会通票"
-        ],
-        "contact": "微信公众号：武汉AI博览会"
-      }
-    },
-    {
-      "id": 4,
-      "type": "ai",
-      "category": "产业大会",
-      "city": "武汉",
-      "isWuhan": true,
-      "title": "ACCON 2026高端芯片产业创新发展大会",
-      "location": "武汉·中国光谷",
-      "date": "2026-10-22",
-      "endDate": "2026-10-23",
-      "organizer": "中国半导体行业协会 / 武汉市政府",
-      "description": "聚焦AI底层算力与芯片支撑，同期配套AI-NATIVE元生代创业营招募，面向AI智能体开发者、创业者提供技术验证、资本对接与产业孵化支持，覆盖智能体全产业链交流。",
-      "tags": [
-        "芯片",
-        "算力",
-        "AI-NATIVE",
-        "创业营"
-      ],
-      "volunteer": {
-        "recruiting": false,
-        "roles": [],
-        "count": 0,
-        "deadline": "",
-        "benefits": [],
-        "contact": ""
-      }
-    },
-    {
-      "id": 5,
-      "type": "ai",
-      "category": "创新大赛",
-      "city": "武汉",
-      "isWuhan": true,
-      "title": "2026全国AI智能体创新开发大赛（武汉主赛场）",
-      "location": "武汉光谷创业街（主赛场）",
-      "date": "2026-09-15",
-      "endDate": "2026-12-10",
-      "organizer": "湖北省科技厅 / 武汉市人才工作局",
-      "description": "设武汉为主赛场，面向35岁以下青年开发者，覆盖智能体全栈开发与场景落地两大赛道，配套免费算力、创业孵化支持，优质项目可对接武汉本地产业资源，决赛预计12月落地武汉。",
-      "tags": [
-        "智能体",
-        "开发者大赛",
-        "创业孵化",
-        "免费算力"
-      ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "赛事运营",
-          "技术评审助理",
-          "选手服务",
-          "直播协助"
-        ],
-        "count": 40,
-        "deadline": "2026-09-10",
-        "benefits": [
-          "赛事证书",
-          "专家指导机会",
-          "创业资源对接"
-        ],
-        "contact": "官网：www.ai-agent-contest.cn"
-      }
-    },
-    {
-      "id": 6,
-      "type": "ai",
-      "category": "创新大赛",
-      "city": "武汉",
-      "isWuhan": true,
-      "title": "灵智江城·赛博龙虾智能体创新大赛",
-      "location": "武汉江岸区·汉口文创谷",
-      "date": "2026-09-20",
-      "endDate": "2026-11-30",
-      "organizer": "武汉市江岸区人民政府",
-      "description": "以线上搓虾·线下嘬虾为特色，聚焦涉江治水、智慧教育、智慧医疗等五大本土场景，设技术挑战、场景创新两大赛道，优胜项目可获得落地孵化与资金支持，线下决赛落地武汉江岸。",
-      "tags": [
-        "智能体",
-        "本土场景",
-        "智慧医疗",
-        "创业扶持"
-      ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "活动执行",
-          "选手对接",
-          "物料管理",
-          "现场摄影"
-        ],
-        "count": 30,
-        "deadline": "2026-09-18",
-        "benefits": [
-          "志愿者证明",
-          "龙虾节专属福利",
-          "创业园区资源"
-        ],
-        "contact": "报名微信：赛博龙虾助手"
-      }
-    },
-    {
-      "id": 7,
-      "type": "ai",
-      "category": "厂商巡展",
-      "city": "武汉",
-      "isWuhan": true,
-      "title": "火山引擎AI创新巡展·光谷站",
-      "location": "武汉光谷凯悦酒店",
-      "date": "2026-10-12",
-      "endDate": "2026-10-12",
-      "organizer": "字节跳动 / 火山引擎",
-      "description": "发布ArkClaw智能体平台万人体验季，向本地创业者开放1万个免费账号，展示Trae AI编程助手、扣子Coze等智能体产品最新成果，设置开发者Workshop与产品体验区。",
-      "tags": [
-        "火山引擎",
-        "Trae",
-        "Coze",
-        "智能体平台"
-      ],
-      "volunteer": {
-        "recruiting": false,
-        "roles": [],
-        "count": 0,
-        "deadline": "",
-        "benefits": [],
-        "contact": ""
-      }
-    },
-    {
-      "id": 8,
-      "type": "ai",
-      "category": "黑客松",
-      "city": "武汉",
-      "isWuhan": true,
-      "title": "武汉AI智能体黑客松·光谷专场",
-      "location": "武汉光谷软件园",
-      "date": "2026-10-18",
-      "endDate": "2026-10-19",
-      "organizer": "武汉东湖高新区 / 光谷创业咖啡",
-      "description": "48小时极限开发，聚焦AI智能体场景创新，提供大模型API免费额度与算力支持，设一等奖5万元，获奖团队可获得光谷孵化器入驻资格与投资人对接。",
-      "tags": [
-        "黑客松",
-        "48小时",
-        "智能体",
-        "创业"
-      ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "赛事志愿者",
-          "技术支持",
-          "餐饮保障",
-          "媒体宣传"
-        ],
-        "count": 25,
-        "deadline": "2026-10-10",
-        "benefits": [
-          "黑客松纪念T恤",
-          "免费餐饮",
-          "创业者人脉"
-        ],
-        "contact": "邮箱：hackathon@opticsvalley.com"
-      }
-    },
-    {
-      "id": 9,
-      "type": "marathon",
-      "category": "半程马拉松",
-      "city": "武汉",
-      "isWuhan": true,
-      "title": "2026武汉后官湖半程马拉松",
-      "location": "武汉蔡甸区后官湖湿地公园",
-      "date": "2026-10-18",
-      "endDate": "2026-10-18",
-      "organizer": "武汉市体育局 / 蔡甸区人民政府",
-      "description": "环绕后官湖绿道的经典半程赛事，赛道风景优美，设半程马拉松（21.0975km）和健康跑（5km）两个项目，参赛规模8000人，完赛奖牌融合楚文化设计元素。",
-      "tags": [
-        "半程马拉松",
-        "环湖赛道",
-        "楚文化奖牌",
-        "健康跑"
-      ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "起点服务",
-          "赛道补给",
-          "终点引导",
-          "医疗辅助",
-          "存包服务"
-        ],
-        "count": 500,
-        "deadline": "2026-10-05",
-        "benefits": [
-          "志愿者服装",
-          "赛事证书",
-          "工作餐",
-          "保险"
-        ],
-        "contact": "官网：www.houguanhu-marathon.com"
-      }
-    },
-    {
-      "id": 10,
-      "type": "marathon",
-      "category": "半程马拉松",
-      "city": "武汉",
-      "isWuhan": true,
-      "title": "2026武汉光谷半程马拉松",
-      "location": "武汉光谷广场（起点）",
-      "date": "2026-11-08",
-      "endDate": "2026-11-08",
-      "organizer": "武汉东湖新技术开发区管委会",
-      "description": "穿越光谷核心区的科技主题马拉松，赛道经过光谷步行街、华中科技大学、光谷生物城等地标，设半程马拉松和迷你跑，参赛规模10000人。",
-      "tags": [
-        "半程马拉松",
-        "科技主题",
-        "光谷地标",
-        "高校赛道"
-      ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "起点检录",
-          "赛道指引",
-          "补给站服务",
-          "完赛服务",
-          "医疗志愿者"
-        ],
-        "count": 600,
-        "deadline": "2026-10-25",
-        "benefits": [
-          "定制志愿者服",
-          "志愿服务证书",
-          "赛事包",
-          "餐饮保障"
-        ],
-        "contact": "微信公众号：光谷马拉松"
-      }
-    },
-    {
-      "id": 11,
-      "type": "marathon",
-      "category": "迷你马拉松",
-      "city": "武汉",
-      "isWuhan": true,
-      "title": "2026武汉江滩迷你马拉松",
-      "location": "武汉汉口江滩",
-      "date": "2026-09-27",
-      "endDate": "2026-09-27",
-      "organizer": "武汉市江岸区文化和旅游局",
-      "description": "长江之滨的亲子友好型迷你马拉松，设10km竞速组和5km亲子组，沿途可欣赏长江大桥与黄鹤楼远景，适合跑步新手与家庭参与。",
-      "tags": [
-        "迷你马拉松",
-        "亲子跑",
-        "江滩风景",
-        "新手友好"
-      ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "签到发放",
-          "赛道服务",
-          "亲子区协助",
-          "医疗点辅助"
-        ],
-        "count": 150,
-        "deadline": "2026-09-20",
-        "benefits": [
-          "志愿者T恤",
-          "活动证书",
-          "免费餐饮"
-        ],
-        "contact": "电话：027-8276xxxx"
-      }
-    },
-    {
-      "id": 12,
-      "type": "ai",
-      "category": "黑客松",
+      "id": 901,
+      "type": "volunteer",
+      "category": "展会志愿服务",
       "city": "上海",
       "isWuhan": false,
-      "title": "外滩黑客松·AI Coding大赛",
-      "location": "上海外滩金融中心",
-      "date": "2026-07-18",
-      "endDate": "2026-07-20",
-      "organizer": "上海市黄浦区 / 多家AI厂商联合",
-      "description": "国内头部AI Coding平台首次集体赛事，Trae、通义灵码、CodeBuddy、Comate等平台联合承办，聚焦AI编程工具创新与开发者生态。",
+      "title": "第九届中国国际进口博览会专业志愿者",
+      "location": "国家会展中心（上海）",
+      "date": "2026-11-05",
+      "endDate": "2026-11-10",
+      "organizer": "中国国际进口博览局 / 上海市志愿者协会",
+      "description": "上海志愿者网官方公告招募具有行业经验、外语能力、跨文化沟通能力和志愿情怀的专业志愿者，服务第九届进博会，覆盖医疗展区、消费品展区等专业服务保障工作。",
       "tags": [
-        "AI Coding",
-        "黑客松",
-        "Trae",
-        "多平台联合"
+        "官方志愿者",
+        "专业志愿者",
+        "展会服务",
+        "上海进博会"
       ],
+      "register": {
+        "status": "open",
+        "deadline": "",
+        "url": "https://www.volunteer.sh.cn/zyzxw/2026/08/29/2ada1320-9c94-434e-91ac-135f637484fe.shtml",
+        "channel": "上海志愿者网官方公告与报名系统",
+        "fee": "免费",
+        "requirements": "以官方公告招募条件为准，通常要求具备行业经验、外语或跨文化沟通能力，并可在服务期内到岗。"
+      },
       "volunteer": {
-        "recruiting": false,
-        "roles": [],
+        "recruiting": true,
+        "roles": [
+          "专业志愿者",
+          "展区服务",
+          "语言服务",
+          "行业讲解"
+        ],
         "count": 0,
         "deadline": "",
-        "benefits": [],
-        "contact": ""
-      }
+        "benefits": [
+          "官方志愿服务保障",
+          "志愿服务证明",
+          "国际展会实践机会"
+        ],
+        "requirements": "以官方公告为准，需具备相应行业经验、外语能力或跨文化沟通能力。",
+        "registerUrl": "https://www.volunteer.sh.cn/zyzxw/2026/08/29/2ada1320-9c94-434e-91ac-135f637484fe.shtml",
+        "registerChannel": "上海志愿者网官方公告",
+        "contact": "上海志愿者网官方公告"
+      },
+      "officialUrl": "https://www.volunteer.sh.cn/zyzxw/2026/08/29/2ada1320-9c94-434e-91ac-135f637484fe.shtml",
+      "sourceName": "上海志愿者网",
+      "sourceKind": "official",
+      "verified": true,
+      "schemaVersion": 2,
+      "updatedAt": "2026-09-08T13:43:59+08:00",
+      "lastChecked": "2026-09-08T13:43:59+08:00",
+      "source": "上海志愿者网",
+      "sourceUrl": "https://www.volunteer.sh.cn/zyzxw/2026/08/29/2ada1320-9c94-434e-91ac-135f637484fe.shtml"
     },
     {
-      "id": 13,
+      "id": 902,
       "type": "ai",
-      "category": "创新大赛",
-      "city": "北京",
+      "category": "技术峰会",
+      "city": "上海",
       "isWuhan": false,
-      "title": "百度搜索·文心智能体创新大赛",
-      "location": "北京百度大厦（决赛）",
-      "date": "2026-08-01",
-      "endDate": "2026-11-30",
-      "organizer": "百度 / 英伟达",
-      "description": "全球规模较大的智能体专项赛事，聚焦技术突破与场景应用双赛道，基于文心智能体平台开发，总奖金池超百万元。",
+      "title": "AI Maker Summit · 2026 上海",
+      "location": "上海浦东滨江喜来登酒店",
+      "date": "2026-09-12",
+      "endDate": "2026-09-12",
+      "organizer": "AI Maker Summit 组委会",
+      "description": "面向 AI 工程师与应用开发者的技术峰会，围绕 AI 工程实践、Agent 应用与开发者生态设置主题演讲、案例分享与交流环节。",
       "tags": [
-        "文心一言",
-        "智能体",
-        "百度",
-        "英伟达"
+        "AI 工程师",
+        "开发者大会",
+        "Agent",
+        "技术峰会"
       ],
+      "register": {
+        "status": "open",
+        "deadline": "",
+        "url": "https://aimakersummit.com/",
+        "channel": "AI Maker Summit 官网在线购票",
+        "fee": "普通票 449 元起，以官网票种为准",
+        "requirements": "公开售票，建议提前在线报名并核对参会凭证。"
+      },
       "volunteer": {
         "recruiting": false,
         "roles": [],
         "count": 0,
         "deadline": "",
         "benefits": [],
+        "requirements": "",
+        "registerUrl": "",
+        "registerChannel": "",
         "contact": ""
-      }
+      },
+      "officialUrl": "https://aimakersummit.com/",
+      "sourceName": "AI Maker Summit 官网",
+      "sourceKind": "official",
+      "verified": true,
+      "schemaVersion": 2,
+      "updatedAt": "2026-09-08T13:43:59+08:00",
+      "lastChecked": "2026-09-08T13:43:59+08:00",
+      "source": "AI Maker Summit 官网",
+      "sourceUrl": "https://aimakersummit.com/"
     },
     {
-      "id": 14,
+      "id": 903,
       "type": "ai",
-      "category": "创新大赛",
-      "city": "杭州",
-      "isWuhan": false,
-      "title": "通义千问AI挑战赛",
-      "location": "杭州阿里巴巴西溪园区",
-      "date": "2026-08-15",
-      "endDate": "2026-12-15",
-      "organizer": "阿里云 / 英伟达 / 天池平台",
-      "description": "依托天池平台举办，设Code Qwen算法赛道、Agent Builder创意赛道，面向全球开发者征集大模型应用创新方案。",
-      "tags": [
-        "通义千问",
-        "Qwen",
-        "天池",
-        "Agent"
-      ],
-      "volunteer": {
-        "recruiting": false,
-        "roles": [],
-        "count": 0,
-        "deadline": "",
-        "benefits": [],
-        "contact": ""
-      }
-    },
-    {
-      "id": 15,
-      "type": "ai",
-      "category": "黑客松",
+      "category": "开源技术大会",
       "city": "深圳",
       "isWuhan": false,
-      "title": "腾讯云黑客松Agent应用创新挑战赛",
-      "location": "深圳腾讯滨海大厦",
-      "date": "2026-09-10",
-      "endDate": "2026-09-12",
-      "organizer": "腾讯云",
-      "description": "设企业微信智能体、公众号智能体、创新创意三大赛道，基于腾讯云元器平台开发，获奖项目可获得腾讯云资源与投资对接。",
+      "title": "GOSIM Shenzhen 2026",
+      "location": "深圳南山 ADEN Hotel",
+      "date": "2026-10-16",
+      "endDate": "2026-10-17",
+      "organizer": "GOSIM Foundation",
+      "description": "面向全球开发者的开源 AI、机器人、边缘系统与开发者基础设施大会，设置会议、工作坊与开源项目交流，150+ 讲者、2000+ 开发者参与。",
       "tags": [
-        "腾讯云",
-        "元器",
-        "企业微信",
-        "智能体"
+        "开源",
+        "AI",
+        "机器人",
+        "开发者社区"
       ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "赛事服务",
-          "技术支持",
-          "选手接待"
-        ],
-        "count": 35,
-        "deadline": "2026-09-05",
-        "benefits": [
-          "腾讯云周边",
-          "赛事证书",
-          "工作餐"
-        ],
-        "contact": "邮箱：hackathon@tencent.com"
-      }
-    },
-    {
-      "id": 16,
-      "type": "ai",
-      "category": "开发者大赛",
-      "city": "合肥",
-      "isWuhan": false,
-      "title": "iFLYTEK AI开发者大赛",
-      "location": "合肥科大讯飞总部",
-      "date": "2026-07-01",
-      "endDate": "2026-10-31",
-      "organizer": "科大讯飞",
-      "description": "以智能体为核心驱动赛道，覆盖办公、教育、健康、制造等垂直场景，基于星火大模型与星辰Agent平台开发。",
-      "tags": [
-        "讯飞星火",
-        "星辰Agent",
-        "开发者大赛",
-        "垂直场景"
-      ],
+      "register": {
+        "status": "open",
+        "deadline": "",
+        "url": "https://www.bagevent.com/event/gosimshenzhen2026",
+        "channel": "GOSIM 官方活动页 / 百格活动",
+        "fee": "以官网票种为准",
+        "requirements": "面向开发者与开源社区公开注册，具体票务与议程见官方活动页。"
+      },
       "volunteer": {
         "recruiting": false,
         "roles": [],
         "count": 0,
         "deadline": "",
         "benefits": [],
+        "requirements": "",
+        "registerUrl": "",
+        "registerChannel": "",
         "contact": ""
-      }
+      },
+      "officialUrl": "https://shenzhen2026.gosim.org/",
+      "sourceName": "GOSIM Shenzhen 2026 官网",
+      "sourceKind": "official",
+      "verified": true,
+      "schemaVersion": 2,
+      "updatedAt": "2026-09-08T13:43:59+08:00",
+      "lastChecked": "2026-09-08T13:43:59+08:00",
+      "source": "GOSIM Shenzhen 2026 官网",
+      "sourceUrl": "https://shenzhen2026.gosim.org/"
     },
     {
-      "id": 17,
+      "id": 904,
       "type": "ai",
-      "category": "高校赛事",
-      "city": "武汉",
-      "isWuhan": true,
-      "title": "星火杯大模型应用创新赛·华中赛区",
-      "location": "华中科技大学（武汉）",
-      "date": "2026-10-25",
-      "endDate": "2026-10-26",
-      "organizer": "科大讯飞 / 华中科技大学",
-      "description": "面向全球高校开发者，基于星辰Agent平台开发智能体，2026年奖金池25万元，华中赛区落地武汉，优胜队伍晋级全国总决赛。",
-      "tags": [
-        "高校赛事",
-        "星火杯",
-        "华中赛区",
-        "智能体"
-      ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "赛场服务",
-          "选手接待",
-          "技术支持",
-          "评审协助"
-        ],
-        "count": 45,
-        "deadline": "2026-10-18",
-        "benefits": [
-          "赛事证书",
-          "讯飞周边",
-          "工作餐",
-          "校招绿色通道"
-        ],
-        "contact": "邮箱：spark-cup@iflytek.com"
-      }
-    },
-    {
-      "id": 18,
-      "type": "marathon",
-      "category": "全程马拉松",
+      "category": "技术大会",
       "city": "北京",
       "isWuhan": false,
-      "title": "2026北京马拉松",
-      "location": "北京天安门广场（起点）",
-      "date": "2026-11-02",
-      "endDate": "2026-11-02",
-      "organizer": "中国田径协会 / 北京市体育局",
-      "description": "国内最高水平的马拉松赛事之一，全马项目，参赛规模30000人，赛道经过天安门、长安街、奥林匹克公园等地标。",
+      "title": "2026 奇点智能技术大会",
+      "location": "北京万达文华酒店",
+      "date": "2026-11-20",
+      "endDate": "2026-11-21",
+      "organizer": "CSDN / 奇点智能研究院",
+      "description": "聚焦 Agentic Scaling、AI Infra、世界模型、具身智能与 Physical AI 等技术方向的技术大会，同期举办 C++ 及系统软件技术大会，含专题演讲、实践分享与现场交流。",
       "tags": [
-        "全程马拉松",
-        "金标赛事",
-        "天安门",
-        "3万人规模"
+        "Agent",
+        "AI Infra",
+        "大模型",
+        "开发者大会"
       ],
+      "register": {
+        "status": "open",
+        "deadline": "",
+        "url": "https://ml-summit.org/",
+        "channel": "大会官网在线报名",
+        "fee": "以大会官网票种为准",
+        "requirements": "公开报名，以官网公布的参会方式与票种说明为准。"
+      },
       "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "起点服务",
-          "赛道补给",
-          "终点引导",
-          "医疗辅助",
-          "翻译服务"
-        ],
-        "count": 3000,
-        "deadline": "2026-10-15",
-        "benefits": [
-          "志愿者服装",
-          "赛事证书",
-          "工作餐",
-          "保险"
-        ],
-        "contact": "官网：www.beijing-marathon.com"
-      }
+        "recruiting": false,
+        "roles": [],
+        "count": 0,
+        "deadline": "",
+        "benefits": [],
+        "requirements": "",
+        "registerUrl": "",
+        "registerChannel": "",
+        "contact": ""
+      },
+      "officialUrl": "https://ml-summit.org/",
+      "sourceName": "奇点智能技术大会官网",
+      "sourceKind": "official",
+      "verified": true,
+      "schemaVersion": 2,
+      "updatedAt": "2026-09-08T13:43:59+08:00",
+      "lastChecked": "2026-09-08T13:43:59+08:00",
+      "source": "奇点智能技术大会官网",
+      "sourceUrl": "https://ml-summit.org/"
     },
     {
-      "id": 19,
+      "id": 905,
       "type": "marathon",
       "category": "全程马拉松",
       "city": "上海",
       "isWuhan": false,
-      "title": "2026上海马拉松",
+      "title": "2026 上海马拉松",
       "location": "上海外滩金牛广场（起点）",
-      "date": "2026-11-23",
-      "endDate": "2026-11-23",
-      "organizer": "中国田径协会 / 上海市体育局",
-      "description": "国际田联白金标赛事，全马项目，参赛规模38000人，赛道贯穿外滩、南京路、淮海路、徐汇滨江等上海标志性路段。",
+      "date": "2026-12-06",
+      "endDate": "2026-12-06",
+      "organizer": "上海马拉松组委会",
+      "description": "世界田联白金标马拉松赛事，2026 上海马拉松在外滩金牛广场起跑，设全程马拉松与竞速轮椅马拉松等组别，赛事规模提升至 30000 人。",
       "tags": [
+        "白金标赛事",
         "全程马拉松",
-        "白金标",
-        "外滩",
-        "3.8万人"
+        "上海外滩",
+        "官方赛事"
       ],
+      "register": {
+        "status": "announced",
+        "deadline": "",
+        "url": "https://www.shang-ma.com/",
+        "channel": "上马官网 / 上马 APP",
+        "fee": "200 元/人，外籍跑者以官网报名须知为准",
+        "requirements": "请按上马官网与报名须知完成报名、抽签或缴费流程。"
+      },
       "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "起点检录",
-          "赛道服务",
-          "补给站",
-          "完赛服务",
-          "医疗志愿者"
-        ],
-        "count": 4000,
-        "deadline": "2026-10-31",
-        "benefits": [
-          "上马志愿者服",
-          "志愿服务证书",
-          "餐饮保障",
-          "保险"
-        ],
-        "contact": "官网：www.shmarathon.com"
-      }
+        "recruiting": false,
+        "roles": [],
+        "count": 0,
+        "deadline": "",
+        "benefits": [],
+        "requirements": "",
+        "registerUrl": "",
+        "registerChannel": "",
+        "contact": ""
+      },
+      "officialUrl": "https://www.shang-ma.com/",
+      "sourceName": "上马网",
+      "sourceKind": "official",
+      "verified": true,
+      "schemaVersion": 2,
+      "updatedAt": "2026-09-08T13:43:59+08:00",
+      "lastChecked": "2026-09-08T13:43:59+08:00",
+      "source": "上马网",
+      "sourceUrl": "https://www.shang-ma.com/"
     },
     {
-      "id": 20,
-      "type": "marathon",
-      "category": "全程马拉松",
-      "city": "杭州",
-      "isWuhan": false,
-      "title": "2026杭州马拉松",
-      "location": "杭州黄龙体育中心（起点）",
-      "date": "2026-11-16",
-      "endDate": "2026-11-16",
-      "organizer": "中国田径协会 / 杭州市体育局",
-      "description": "国际田联金标赛事，设全马、半马、迷你跑，赛道经过西湖、钱塘江、钱江新城，参赛规模35000人。",
-      "tags": [
-        "全程马拉松",
-        "金标赛事",
-        "西湖",
-        "钱塘江"
-      ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "赛事服务",
-          "赛道指引",
-          "补给站",
-          "医疗辅助"
-        ],
-        "count": 2500,
-        "deadline": "2026-10-25",
-        "benefits": [
-          "杭马志愿者服",
-          "证书",
-          "工作餐",
-          "保险"
-        ],
-        "contact": "官网：www.hzim.org"
-      }
-    },
-    {
-      "id": 21,
-      "type": "marathon",
-      "category": "全程马拉松",
-      "city": "成都",
-      "isWuhan": false,
-      "title": "2026成都马拉松",
-      "location": "成都金沙遗址博物馆（起点）",
-      "date": "2026-10-26",
-      "endDate": "2026-10-26",
-      "organizer": "中国田径协会 / 成都市人民政府",
-      "description": "国际田联金标赛事，全马项目，赛道经过天府广场、宽窄巷子、锦江公园、天府新区，参赛规模30000人。",
-      "tags": [
-        "全程马拉松",
-        "金标赛事",
-        "天府之国",
-        "美食赛道"
-      ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "起点服务",
-          "赛道补给",
-          "终点服务",
-          "医疗志愿者"
-        ],
-        "count": 2800,
-        "deadline": "2026-10-10",
-        "benefits": [
-          "成马志愿者服",
-          "证书",
-          "餐饮",
-          "保险"
-        ],
-        "contact": "官网：www.chengdu-marathon.org"
-      }
-    },
-    {
-      "id": 22,
+      "id": 906,
       "type": "marathon",
       "category": "全程马拉松",
       "city": "广州",
       "isWuhan": false,
-      "title": "2026广州马拉松",
+      "title": "2026 广汽丰田广州马拉松赛",
       "location": "广州天河体育中心（起点）",
-      "date": "2026-12-07",
-      "endDate": "2026-12-07",
-      "organizer": "中国田径协会 / 广州市人民政府",
-      "description": "国际田联金标赛事，全马项目，赛道经过珠江新城、广州塔、海心沙、猎德大桥，参赛规模30000人。",
+      "date": "2026-12-20",
+      "endDate": "2026-12-20",
+      "organizer": "广州马拉松赛组委会",
+      "description": "世界田联金标马拉松赛事，2026 广州马拉松规模扩大至 30000 人，设全程马拉松项目，比赛分四枪起跑，终点为海心沙。",
       "tags": [
+        "世界田联金标",
         "全程马拉松",
-        "金标赛事",
-        "广州塔",
-        "珠江"
+        "广州天河",
+        "官方赛事"
       ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "赛事服务",
-          "赛道指引",
-          "补给站",
-          "医疗辅助",
-          "终点服务"
-        ],
-        "count": 2600,
-        "deadline": "2026-11-15",
-        "benefits": [
-          "广马志愿者服",
-          "证书",
-          "工作餐",
-          "保险"
-        ],
-        "contact": "官网：www.guangzhou-marathon.com"
-      }
-    },
-    {
-      "id": 23,
-      "type": "marathon",
-      "category": "半程马拉松",
-      "city": "南京",
-      "isWuhan": false,
-      "title": "2026南京马拉松",
-      "location": "南京奥体中心（起点）",
-      "date": "2026-11-09",
-      "endDate": "2026-11-09",
-      "organizer": "中国田径协会 / 南京市体育局",
-      "description": "国际田联铜标赛事，设全马、半马、迷你跑，赛道经过中山陵、夫子庙、玄武湖、长江大桥，参赛规模28000人。",
-      "tags": [
-        "全程马拉松",
-        "半程马拉松",
-        "中山陵",
-        "玄武湖"
-      ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "起点服务",
-          "赛道补给",
-          "终点引导",
-          "医疗辅助"
-        ],
-        "count": 2000,
-        "deadline": "2026-10-20",
-        "benefits": [
-          "南马志愿者服",
-          "证书",
-          "餐饮",
-          "保险"
-        ],
-        "contact": "官网：www.nj-marathon.com"
-      }
-    },
-    {
-      "id": 24,
-      "type": "marathon",
-      "category": "全程马拉松",
-      "city": "长沙",
-      "isWuhan": false,
-      "title": "2026长沙马拉松",
-      "location": "长沙贺龙体育中心（起点）",
-      "date": "2026-10-19",
-      "endDate": "2026-10-19",
-      "organizer": "中国田径协会 / 长沙市体育局",
-      "description": "国际田联铜标赛事，全马项目，赛道经过橘子洲、岳麓山、湘江风光带，参赛规模24000人，以红色马拉松为特色。",
-      "tags": [
-        "全程马拉松",
-        "橘子洲",
-        "岳麓山",
-        "红色主题"
-      ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "赛事服务",
-          "赛道指引",
-          "补给站",
-          "医疗志愿者"
-        ],
-        "count": 1800,
-        "deadline": "2026-10-05",
-        "benefits": [
-          "长马志愿者服",
-          "证书",
-          "工作餐",
-          "保险"
-        ],
-        "contact": "官网：www.changsha-marathon.com"
-      }
-    },
-    {
-      "id": 25,
-      "type": "marathon",
-      "category": "半程马拉松",
-      "city": "重庆",
-      "isWuhan": false,
-      "title": "2026重庆女子半程马拉松",
-      "location": "重庆南滨路（起点）",
-      "date": "2026-11-02",
-      "endDate": "2026-11-02",
-      "organizer": "中国田径协会 / 重庆市体育局",
-      "description": "国内唯一的国际田联铜标女子半程马拉松，设半程马拉松和5km乐跑，仅限女性报名，参赛规模12000人，完赛奖牌为精美项链设计。",
-      "tags": [
-        "女子半程",
-        "半程马拉松",
-        "南滨路",
-        "项链奖牌"
-      ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "起点服务",
-          "赛道补给",
-          "终点服务",
-          "医疗辅助",
-          "礼仪服务"
-        ],
-        "count": 800,
-        "deadline": "2026-10-20",
-        "benefits": [
-          "志愿者服装",
-          "证书",
-          "工作餐",
-          "保险"
-        ],
-        "contact": "官网：www.cqwomensmarathon.com"
-      }
-    },
-    {
-      "id": 26,
-      "type": "ai",
-      "category": "技术峰会",
-      "city": "武汉",
-      "isWuhan": true,
-      "title": "2026武汉AI+教育融合发展峰会",
-      "location": "武汉国际会议中心",
-      "date": "2026-10-15",
-      "endDate": "2026-10-16",
-      "organizer": "湖北省教育厅 / 武汉市教育局",
-      "description": "聚焦AI技术在教育场景的落地应用，邀请国内知名高校与教育科技企业分享智能体教学、AI助教、个性化学习等前沿实践，设置教育智能体产品体验区。",
-      "tags": [
-        "AI+教育",
-        "智能体教学",
-        "AI助教",
-        "教育科技"
-      ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "嘉宾接待",
-          "会场服务",
-          "技术支持",
-          "资料分发"
-        ],
-        "count": 50,
-        "deadline": "2026-10-08",
-        "benefits": [
-          "峰会证书",
-          "工作餐",
-          "教育行业人脉"
-        ],
-        "contact": "邮箱：ai-edu@wuhan.gov.cn"
-      }
-    },
-    {
-      "id": 27,
-      "type": "ai",
-      "category": "厂商活动",
-      "city": "武汉",
-      "isWuhan": true,
-      "title": "通义灵码开发者日·武汉站",
-      "location": "武汉光谷创业咖啡",
-      "date": "2026-09-28",
-      "endDate": "2026-09-28",
-      "organizer": "阿里云 / 通义灵码",
-      "description": "面向武汉开发者的AI编程工具深度体验活动，包含通义灵码功能演示、实战Workshop、开发者圆桌讨论，现场提供阿里云API免费额度。",
-      "tags": [
-        "通义灵码",
-        "AI编程",
-        "开发者日",
-        "Workshop"
-      ],
+      "register": {
+        "status": "open",
+        "deadline": "2026-09-11",
+        "url": "https://www.guangzhou-marathon.com/",
+        "channel": "广州马拉松赛官网及官方合作 APP",
+        "fee": "180 元人民币/人",
+        "requirements": "报名须符合官方报名须知中的成绩、健康与年龄要求；不接受团体报名。"
+      },
       "volunteer": {
         "recruiting": false,
         "roles": [],
         "count": 0,
         "deadline": "",
         "benefits": [],
+        "requirements": "",
+        "registerUrl": "",
+        "registerChannel": "",
         "contact": ""
-      }
+      },
+      "officialUrl": "https://www.guangzhou-marathon.com/",
+      "sourceName": "广州马拉松赛官网",
+      "sourceKind": "official",
+      "verified": true,
+      "schemaVersion": 2,
+      "updatedAt": "2026-09-08T13:43:59+08:00",
+      "lastChecked": "2026-09-08T13:43:59+08:00",
+      "source": "广州马拉松赛官网",
+      "sourceUrl": "https://www.guangzhou-marathon.com/"
     },
     {
-      "id": 28,
-      "type": "ai",
-      "category": "产业论坛",
-      "city": "武汉",
-      "isWuhan": true,
-      "title": "2026中国（武汉）智能体产业生态论坛",
-      "location": "武汉会议中心",
-      "date": "2026-11-06",
-      "endDate": "2026-11-07",
-      "organizer": "中国人工智能学会 / 武汉市科技局",
-      "description": "聚焦智能体产业生态构建，邀请头部AI厂商、投资机构、高校研究院共同探讨智能体技术标准、商业模式与落地路径，发布武汉智能体产业发展白皮书。",
-      "tags": [
-        "智能体产业",
-        "生态论坛",
-        "白皮书",
-        "投资对接"
-      ],
-      "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "论坛会务",
-          "嘉宾接待",
-          "记录整理",
-          "现场协调"
-        ],
-        "count": 40,
-        "deadline": "2026-10-30",
-        "benefits": [
-          "论坛证书",
-          "工作餐",
-          "行业资源对接"
-        ],
-        "contact": "微信公众号：武汉智能体论坛"
-      }
-    },
-    {
-      "id": 29,
+      "id": 907,
       "type": "marathon",
-      "category": "越野跑",
-      "city": "武汉",
-      "isWuhan": true,
-      "title": "2026武汉木兰山越野挑战赛",
-      "location": "武汉黄陂区木兰山风景区",
-      "date": "2026-11-15",
-      "endDate": "2026-11-15",
-      "organizer": "武汉市黄陂区文化和旅游局",
-      "description": "武汉近郊经典越野赛事，设50km、25km、10km三个组别，赛道穿越木兰山森林与古道，累计爬升1800米，参赛规模1500人。",
+      "category": "全程马拉松",
+      "city": "杭州",
+      "isWuhan": false,
+      "title": "2026 吉利汽车杭州马拉松",
+      "location": "杭州黄龙体育中心",
+      "date": "2026-11-01",
+      "endDate": "2026-11-01",
+      "organizer": "杭州马拉松组委会",
+      "description": "2026 杭州马拉松于黄龙体育中心鸣枪，设全程马拉松与半程马拉松等项目，参赛规模约 36000 人。",
       "tags": [
-        "越野跑",
-        "木兰山",
-        "50km",
-        "森林赛道"
+        "全程马拉松",
+        "半程马拉松",
+        "杭州黄龙",
+        "官方赛事"
       ],
+      "register": {
+        "status": "closed",
+        "deadline": "2026-07-15",
+        "url": "https://hm.zhetiyu.cn/",
+        "channel": "杭州马拉松官网 hm.zhetiyu.cn",
+        "fee": "以官方报名须知为准",
+        "requirements": "大众报名已于官网规定时段截止，后续请关注抽签、候补与缴费通知。"
+      },
       "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "打卡点服务",
-          "补给站",
-          "赛道指引",
-          "救援辅助"
-        ],
-        "count": 120,
-        "deadline": "2026-11-01",
-        "benefits": [
-          "越野赛志愿者服",
-          "证书",
-          "餐饮",
-          "保险"
-        ],
-        "contact": "官网：www.mulan-trail.com"
-      }
+        "recruiting": false,
+        "roles": [],
+        "count": 0,
+        "deadline": "",
+        "benefits": [],
+        "requirements": "",
+        "registerUrl": "",
+        "registerChannel": "",
+        "contact": ""
+      },
+      "officialUrl": "https://hm.zhetiyu.cn/",
+      "sourceName": "杭州马拉松官网",
+      "sourceKind": "official",
+      "verified": true,
+      "schemaVersion": 2,
+      "updatedAt": "2026-09-08T13:43:59+08:00",
+      "lastChecked": "2026-09-08T13:43:59+08:00",
+      "source": "杭州马拉松官网",
+      "sourceUrl": "https://hm.zhetiyu.cn/"
     },
     {
-      "id": 30,
-      "type": "ai",
-      "category": "技术沙龙",
-      "city": "武汉",
-      "isWuhan": true,
-      "title": "AIGC商业化路径探索沙龙·武汉站",
-      "location": "武汉汉口江滩·共享空间",
-      "date": "2026-09-14",
-      "endDate": "2026-09-14",
-      "organizer": "武汉创业者协会 / 光谷AI俱乐部",
-      "description": "聚焦AIGC商业化落地，邀请本地AI创业者分享AI漫剧变现、智能体SaaS、AI内容工厂等实战案例，设置项目路演与投资人面对面环节。",
+      "id": 908,
+      "type": "marathon",
+      "category": "全程马拉松",
+      "city": "南京",
+      "isWuhan": false,
+      "title": "2026 南京银行南京马拉松",
+      "location": "南京奥体中心（起点）",
+      "date": "2026-11-22",
+      "endDate": "2026-11-22",
+      "organizer": "南京马拉松组委会",
+      "description": "2026 南京马拉松设全程马拉松项目，规模 26000 人，报名通过南京马拉松官网或官方合作平台完成。",
       "tags": [
-        "AIGC",
-        "商业化",
-        "创业沙龙",
-        "项目路演"
+        "全程马拉松",
+        "南京奥体",
+        "官方赛事",
+        "26000人"
       ],
+      "register": {
+        "status": "closed",
+        "deadline": "2026-08-28",
+        "url": "https://www.nj-marathon.cn/",
+        "channel": "南京马拉松官网 / 官方合作平台",
+        "fee": "以官方报名须知为准",
+        "requirements": "大众报名已于官网规定时段截止，后续请以官方公告为准。"
+      },
       "volunteer": {
-        "recruiting": true,
-        "roles": [
-          "签到接待",
-          "现场执行",
-          "摄影记录",
-          "嘉宾对接"
-        ],
-        "count": 15,
-        "deadline": "2026-09-10",
-        "benefits": [
-          "免费参会",
-          "创业者人脉",
-          "活动证书"
-        ],
-        "contact": "微信：光谷AI俱乐部"
-      }
+        "recruiting": false,
+        "roles": [],
+        "count": 0,
+        "deadline": "",
+        "benefits": [],
+        "requirements": "",
+        "registerUrl": "",
+        "registerChannel": "",
+        "contact": ""
+      },
+      "officialUrl": "https://www.nj-marathon.cn/",
+      "sourceName": "南京马拉松官网",
+      "sourceKind": "official",
+      "verified": true,
+      "schemaVersion": 2,
+      "updatedAt": "2026-09-08T13:43:59+08:00",
+      "lastChecked": "2026-09-08T13:43:59+08:00",
+      "source": "南京马拉松官网",
+      "sourceUrl": "https://www.nj-marathon.cn/"
+    },
+    {
+      "id": 909,
+      "type": "marathon",
+      "category": "全程马拉松",
+      "city": "深圳",
+      "isWuhan": false,
+      "title": "2026 深圳马拉松",
+      "location": "深圳市民中心（起点）",
+      "date": "2026-12-06",
+      "endDate": "2026-12-06",
+      "organizer": "深圳马拉松组委会",
+      "description": "深圳马拉松官方赛事，世界田联金标马拉松。2026 深圳马拉松以深圳市民中心为起点，官方报名时间为 9 月 3 日 10:00 至 9 月 18 日 17:00。",
+      "tags": [
+        "世界田联金标",
+        "全程马拉松",
+        "深圳市民中心",
+        "官方赛事"
+      ],
+      "register": {
+        "status": "open",
+        "opensAt": "2026-09-03T10:00:00+08:00",
+        "deadline": "2026-09-18T17:00:00+08:00",
+        "url": "http://shenzhenmarathon.org.cn/contentDetail.html?detailId=7954015057255596&topicId=6990424010986444&appKey=shenzhenMarathon",
+        "channel": "深圳马拉松官网 / 官方合作平台",
+        "fee": "以官网报名须知为准",
+        "requirements": "报名与参赛资格以深圳马拉松官网报名须知为准，请按官方要求完成报名、抽签或缴费流程。"
+      },
+      "volunteer": {
+        "recruiting": false,
+        "roles": [],
+        "count": 0,
+        "deadline": "",
+        "benefits": [],
+        "requirements": "",
+        "registerUrl": "",
+        "registerChannel": "",
+        "contact": ""
+      },
+      "officialUrl": "http://shenzhenmarathon.org.cn/contentDetail.html?detailId=7954015057255596&topicId=6990424010986444&appKey=shenzhenMarathon",
+      "sourceName": "深圳马拉松官网",
+      "sourceKind": "official",
+      "verified": true,
+      "schemaVersion": 2,
+      "updatedAt": "2026-09-08T13:43:59+08:00",
+      "lastChecked": "2026-09-08T13:43:59+08:00",
+      "source": "深圳马拉松官网",
+      "sourceUrl": "http://shenzhenmarathon.org.cn/contentDetail.html?detailId=7954015057255596&topicId=6990424010986444&appKey=shenzhenMarathon"
+    },
+    {
+      "id": 910,
+      "type": "marathon",
+      "category": "全程马拉松",
+      "city": "珠海",
+      "isWuhan": false,
+      "title": "2026 横琴人寿保险横琴马拉松",
+      "location": "横琴粤澳深度合作区（珠海）",
+      "date": "2026-12-27",
+      "endDate": "2026-12-27",
+      "organizer": "横琴马拉松组委会",
+      "description": "横琴人寿横琴马拉松官方赛事，设马拉松、半程马拉松等项目，报名时间为 8 月 18 日 10:00 至 9 月 12 日 22:00，采用预报名与抽签确认方式。",
+      "tags": [
+        "全程马拉松",
+        "半程马拉松",
+        "横琴",
+        "官方赛事"
+      ],
+      "register": {
+        "status": "open",
+        "opensAt": "2026-08-18T10:00:00+08:00",
+        "deadline": "2026-09-12T22:00:00+08:00",
+        "url": "https://www.hengqinmarathon.com/race-256",
+        "channel": "横琴马拉松官网 / 马拉马拉 / 华发体育小程序",
+        "fee": "以官网报名须知为准",
+        "requirements": "预报名采用抽签方式确认参赛资格，报名与体检要求以横琴马拉松官网竞赛规程为准。"
+      },
+      "volunteer": {
+        "recruiting": false,
+        "roles": [],
+        "count": 0,
+        "deadline": "",
+        "benefits": [],
+        "requirements": "",
+        "registerUrl": "",
+        "registerChannel": "",
+        "contact": ""
+      },
+      "officialUrl": "https://www.hengqinmarathon.com/race-256",
+      "sourceName": "横琴人寿横琴马拉松官网",
+      "sourceKind": "official",
+      "verified": true,
+      "schemaVersion": 2,
+      "updatedAt": "2026-09-08T13:43:59+08:00",
+      "lastChecked": "2026-09-08T13:43:59+08:00",
+      "source": "横琴人寿横琴马拉松官网",
+      "sourceUrl": "https://www.hengqinmarathon.com/race-256"
+    },
+    {
+      "id": 911,
+      "type": "marathon",
+      "category": "全程马拉松",
+      "city": "福州",
+      "isWuhan": false,
+      "title": "2026 福州马拉松",
+      "location": "福州（具体起终点以官方公布为准）",
+      "date": "2026-12-27",
+      "endDate": "2026-12-27",
+      "organizer": "福州马拉松组委会",
+      "description": "2026 福州马拉松设马拉松、半程马拉松等项目，预报名时间为 9 月 10 日 20:00 至 9 月 19 日 17:00，采用预报名、抽签、中签后缴费方式。",
+      "tags": [
+        "全程马拉松",
+        "半程马拉松",
+        "福州",
+        "官方赛事"
+      ],
+      "register": {
+        "status": "announced",
+        "opensAt": "2026-09-10T20:00:00+08:00",
+        "deadline": "2026-09-19T17:00:00+08:00",
+        "url": "https://www.fuzhou-marathon.com/",
+        "channel": "福州马拉松官网 / 官方报名平台",
+        "fee": "以官网报名须知为准",
+        "requirements": "9 月 10 日 20:00 开放预报名，9 月 19 日 17:00 截止，中签后按官方通知缴费。"
+      },
+      "volunteer": {
+        "recruiting": false,
+        "roles": [],
+        "count": 0,
+        "deadline": "",
+        "benefits": [],
+        "requirements": "",
+        "registerUrl": "",
+        "registerChannel": "",
+        "contact": ""
+      },
+      "officialUrl": "https://www.fuzhou-marathon.com/",
+      "sourceName": "福州马拉松官网",
+      "sourceKind": "official",
+      "verified": true,
+      "schemaVersion": 2,
+      "updatedAt": "2026-09-08T13:43:59+08:00",
+      "lastChecked": "2026-09-08T13:43:59+08:00",
+      "source": "福州马拉松官网",
+      "sourceUrl": "https://www.fuzhou-marathon.com/"
     }
   ]
 }
