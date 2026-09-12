@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-09-11T16:05:32+08:00",
+  "updatedAt": "2026-09-12T15:57:03+08:00",
   "source": "activity-radar-web/official-registry",
   "generator": "radar-official-sync",
   "fallback": false,
@@ -11,7 +11,7 @@
         "name": "中国马拉松 / 中国田径协会认证赛事平台",
         "url": "https://mls.chinaath.com/",
         "kind": "official",
-        "checkedAt": "2026-09-11T16:05:32+08:00",
+        "checkedAt": "2026-09-12T15:57:03+08:00",
         "ok": true,
         "httpStatus": 200
       },
@@ -19,7 +19,7 @@
         "name": "中国田径协会官网",
         "url": "https://www.athletics.org.cn/",
         "kind": "official",
-        "checkedAt": "2026-09-11T16:05:32+08:00",
+        "checkedAt": "2026-09-12T15:57:03+08:00",
         "ok": false,
         "httpStatus": null
       },
@@ -27,15 +27,15 @@
         "name": "上马网",
         "url": "https://www.shang-ma.com/",
         "kind": "official",
-        "checkedAt": "2026-09-11T16:05:32+08:00",
-        "ok": true,
-        "httpStatus": 200
+        "checkedAt": "2026-09-12T15:57:03+08:00",
+        "ok": false,
+        "httpStatus": null
       },
       {
         "name": "广州马拉松赛官网",
         "url": "https://www.guangzhou-marathon.com/",
         "kind": "official",
-        "checkedAt": "2026-09-11T16:05:32+08:00",
+        "checkedAt": "2026-09-12T15:57:03+08:00",
         "ok": true,
         "httpStatus": 200
       },
@@ -43,7 +43,7 @@
         "name": "杭州马拉松官网",
         "url": "https://hm.zhetiyu.cn/",
         "kind": "official",
-        "checkedAt": "2026-09-11T16:05:32+08:00",
+        "checkedAt": "2026-09-12T15:57:03+08:00",
         "ok": true,
         "httpStatus": 200
       },
@@ -51,7 +51,7 @@
         "name": "南京马拉松官网",
         "url": "https://www.nj-marathon.cn/",
         "kind": "official",
-        "checkedAt": "2026-09-11T16:05:32+08:00",
+        "checkedAt": "2026-09-12T15:57:03+08:00",
         "ok": true,
         "httpStatus": 200
       },
@@ -59,15 +59,15 @@
         "name": "上海志愿者网",
         "url": "https://www.volunteer.sh.cn/",
         "kind": "official",
-        "checkedAt": "2026-09-11T16:05:32+08:00",
-        "ok": false,
-        "httpStatus": null
+        "checkedAt": "2026-09-12T15:57:03+08:00",
+        "ok": true,
+        "httpStatus": 200
       },
       {
         "name": "GOSIM Shenzhen 2026",
         "url": "https://shenzhen2026.gosim.org/",
         "kind": "official",
-        "checkedAt": "2026-09-11T16:05:32+08:00",
+        "checkedAt": "2026-09-12T15:57:03+08:00",
         "ok": true,
         "httpStatus": 200
       },
@@ -75,7 +75,7 @@
         "name": "奇点智能技术大会",
         "url": "https://ml-summit.org/",
         "kind": "official",
-        "checkedAt": "2026-09-11T16:05:32+08:00",
+        "checkedAt": "2026-09-12T15:57:03+08:00",
         "ok": true,
         "httpStatus": 200
       },
@@ -83,7 +83,7 @@
         "name": "AI Maker Summit",
         "url": "https://aimakersummit.com/",
         "kind": "official",
-        "checkedAt": "2026-09-11T16:05:32+08:00",
+        "checkedAt": "2026-09-12T15:57:03+08:00",
         "ok": true,
         "httpStatus": 200
       },
@@ -91,7 +91,7 @@
         "name": "深圳马拉松官网",
         "url": "http://shenzhenmarathon.org.cn/",
         "kind": "official",
-        "checkedAt": "2026-09-11T16:05:32+08:00",
+        "checkedAt": "2026-09-12T15:57:03+08:00",
         "ok": true,
         "httpStatus": 200
       },
@@ -99,7 +99,7 @@
         "name": "横琴人寿横琴马拉松官网",
         "url": "https://www.hengqinmarathon.com/",
         "kind": "official",
-        "checkedAt": "2026-09-11T16:05:32+08:00",
+        "checkedAt": "2026-09-12T15:57:03+08:00",
         "ok": true,
         "httpStatus": 200
       },
@@ -107,7 +107,7 @@
         "name": "福州马拉松官网",
         "url": "https://www.fuzhou-marathon.com/",
         "kind": "official",
-        "checkedAt": "2026-09-11T16:05:32+08:00",
+        "checkedAt": "2026-09-12T15:57:03+08:00",
         "ok": true,
         "httpStatus": 200
       }
@@ -165,8 +165,8 @@
       "sourceKind": "official",
       "verified": true,
       "schemaVersion": 2,
-      "updatedAt": "2026-09-11T16:05:32+08:00",
-      "lastChecked": "2026-09-11T16:05:32+08:00",
+      "updatedAt": "2026-09-12T15:57:03+08:00",
+      "lastChecked": "2026-09-12T15:57:03+08:00",
       "source": "上海志愿者网",
       "sourceUrl": "https://www.volunteer.sh.cn/zyzxw/2026/08/29/2ada1320-9c94-434e-91ac-135f637484fe.shtml"
     },
@@ -212,8 +212,8 @@
       "sourceKind": "official",
       "verified": true,
       "schemaVersion": 2,
-      "updatedAt": "2026-09-11T16:05:32+08:00",
-      "lastChecked": "2026-09-11T16:05:32+08:00",
+      "updatedAt": "2026-09-12T15:57:03+08:00",
+      "lastChecked": "2026-09-12T15:57:03+08:00",
       "source": "AI Maker Summit 官网",
       "sourceUrl": "https://aimakersummit.com/"
     },
@@ -259,8 +259,8 @@
       "sourceKind": "official",
       "verified": true,
       "schemaVersion": 2,
-      "updatedAt": "2026-09-11T16:05:32+08:00",
-      "lastChecked": "2026-09-11T16:05:32+08:00",
+      "updatedAt": "2026-09-12T15:57:03+08:00",
+      "lastChecked": "2026-09-12T15:57:03+08:00",
       "source": "GOSIM Shenzhen 2026 官网",
       "sourceUrl": "https://shenzhen2026.gosim.org/"
     },
@@ -306,8 +306,8 @@
       "sourceKind": "official",
       "verified": true,
       "schemaVersion": 2,
-      "updatedAt": "2026-09-11T16:05:32+08:00",
-      "lastChecked": "2026-09-11T16:05:32+08:00",
+      "updatedAt": "2026-09-12T15:57:03+08:00",
+      "lastChecked": "2026-09-12T15:57:03+08:00",
       "source": "奇点智能技术大会官网",
       "sourceUrl": "https://ml-summit.org/"
     },
@@ -353,8 +353,8 @@
       "sourceKind": "official",
       "verified": true,
       "schemaVersion": 2,
-      "updatedAt": "2026-09-11T16:05:32+08:00",
-      "lastChecked": "2026-09-11T16:05:32+08:00",
+      "updatedAt": "2026-09-12T15:57:03+08:00",
+      "lastChecked": "2026-09-12T15:57:03+08:00",
       "source": "上马网",
       "sourceUrl": "https://www.shang-ma.com/"
     },
@@ -400,8 +400,8 @@
       "sourceKind": "official",
       "verified": true,
       "schemaVersion": 2,
-      "updatedAt": "2026-09-11T16:05:32+08:00",
-      "lastChecked": "2026-09-11T16:05:32+08:00",
+      "updatedAt": "2026-09-12T15:57:03+08:00",
+      "lastChecked": "2026-09-12T15:57:03+08:00",
       "source": "广州马拉松赛官网",
       "sourceUrl": "https://www.guangzhou-marathon.com/"
     },
@@ -447,8 +447,8 @@
       "sourceKind": "official",
       "verified": true,
       "schemaVersion": 2,
-      "updatedAt": "2026-09-11T16:05:32+08:00",
-      "lastChecked": "2026-09-11T16:05:32+08:00",
+      "updatedAt": "2026-09-12T15:57:03+08:00",
+      "lastChecked": "2026-09-12T15:57:03+08:00",
       "source": "杭州马拉松官网",
       "sourceUrl": "https://hm.zhetiyu.cn/"
     },
@@ -494,8 +494,8 @@
       "sourceKind": "official",
       "verified": true,
       "schemaVersion": 2,
-      "updatedAt": "2026-09-11T16:05:32+08:00",
-      "lastChecked": "2026-09-11T16:05:32+08:00",
+      "updatedAt": "2026-09-12T15:57:03+08:00",
+      "lastChecked": "2026-09-12T15:57:03+08:00",
       "source": "南京马拉松官网",
       "sourceUrl": "https://www.nj-marathon.cn/"
     },
@@ -542,8 +542,8 @@
       "sourceKind": "official",
       "verified": true,
       "schemaVersion": 2,
-      "updatedAt": "2026-09-11T16:05:32+08:00",
-      "lastChecked": "2026-09-11T16:05:32+08:00",
+      "updatedAt": "2026-09-12T15:57:03+08:00",
+      "lastChecked": "2026-09-12T15:57:03+08:00",
       "source": "深圳马拉松官网",
       "sourceUrl": "http://shenzhenmarathon.org.cn/contentDetail.html?detailId=7954015057255596&topicId=6990424010986444&appKey=shenzhenMarathon"
     },
@@ -590,8 +590,8 @@
       "sourceKind": "official",
       "verified": true,
       "schemaVersion": 2,
-      "updatedAt": "2026-09-11T16:05:32+08:00",
-      "lastChecked": "2026-09-11T16:05:32+08:00",
+      "updatedAt": "2026-09-12T15:57:03+08:00",
+      "lastChecked": "2026-09-12T15:57:03+08:00",
       "source": "横琴人寿横琴马拉松官网",
       "sourceUrl": "https://www.hengqinmarathon.com/race-256"
     },
@@ -638,8 +638,8 @@
       "sourceKind": "official",
       "verified": true,
       "schemaVersion": 2,
-      "updatedAt": "2026-09-11T16:05:32+08:00",
-      "lastChecked": "2026-09-11T16:05:32+08:00",
+      "updatedAt": "2026-09-12T15:57:03+08:00",
+      "lastChecked": "2026-09-12T15:57:03+08:00",
       "source": "福州马拉松官网",
       "sourceUrl": "https://www.fuzhou-marathon.com/"
     }
